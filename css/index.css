@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    animation: colorchange ease-in 600ms;
+}
+
+.loadScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#logo {
+    position: absolute;
+    top: 55px;
+    left: 80px;
+    width: 100px;
+    animation: animate-logo ease-in 600ms;
+}
+
+#logo2 {
+    position: absolute;
+    top: 55px;
+    left: 80px;
+    width: 100px;
+    animation: animate-logo-2 ease-in-out 600ms;
+
+}
+
+@keyframes animate-logo {
+    0% {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transform: scale(3);
+    }
+
+    55% {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transform: scale(3);
+    }
+
+    100% {
+        top: 75px;
+        left: 80px;
+        transform: scale(1);
+        display: none;
+    }
+}
+
+@keyframes colorchange {
+    0% {
+        background-color: #4589FF;
+    }
+
+    50% {
+        background-color: #4589FF;
+    }
+
+    100% {
+        background-color: white;
+    }
+}
+
+@keyframes animate-logo-2 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    99% {
+        opacity: 0;
+    }
+}
+
+.navBar {
+    display: flex;
+    justify-content: flex-end !important;
+    margin-top: 55px;
+    margin-right: 55px;
+}
+
+a {
+    margin-right: 30px;
+    margin-top: 5px;
+    font-size: large;
+}
