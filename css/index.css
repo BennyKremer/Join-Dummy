@@ -1,90 +1,237 @@
 body {
-    margin: 0;
-    animation: colorchange ease-in 600ms;
+  margin: 0;
+  animation: colorchange ease-in 600ms;
 }
 
 .loadScreen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #logo {
-    position: absolute;
-    top: 55px;
-    left: 80px;
-    width: 100px;
-    animation: animate-logo ease-in 600ms;
+  position: absolute;
+  top: 55px;
+  left: 80px;
+  width: 100px;
+  animation: animate-logo ease-in 600ms;
 }
 
 #logo2 {
-    position: absolute;
-    top: 55px;
-    left: 80px;
-    width: 100px;
-    animation: animate-logo-2 ease-in-out 600ms;
-
+  position: absolute;
+  top: 55px;
+  left: 80px;
+  width: 100px;
+  animation: animate-logo-2 ease-in-out 600ms;
 }
 
 @keyframes animate-logo {
-    0% {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transform: scale(3);
-    }
+  0% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: scale(3);
+  }
 
-    55% {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transform: scale(3);
-    }
+  55% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: scale(3);
+  }
 
-    100% {
-        top: 75px;
-        left: 80px;
-        transform: scale(1);
-        display: none;
-    }
+  100% {
+    top: 75px;
+    left: 80px;
+    transform: scale(1);
+    display: none;
+  }
 }
 
 @keyframes colorchange {
-    0% {
-        background-color: #4589FF;
-    }
+  0% {
+    background-color: #4589ff;
+  }
 
-    50% {
-        background-color: #4589FF;
-    }
+  50% {
+    background-color: #4589ff;
+  }
 
-    100% {
-        background-color: white;
-    }
+  100% {
+    background-color: white;
+  }
 }
 
 @keyframes animate-logo-2 {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0;
-    }
-    99% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
 }
 
+@keyframes popUp {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+ @keyframes loginPopup {
+    0% {
+        opacity: 0;
+      }
+      99% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+ }
+
+
 .navBar {
-    display: flex;
-    justify-content: flex-end !important;
-    margin-top: 55px;
-    margin-right: 55px;
+  display: flex;
+  justify-content: flex-end !important;
+  margin-top: 55px;
+  margin-right: 55px;
+  animation: popUp ease-in-out 600ms;
 }
 
 a {
-    margin-right: 30px;
-    margin-top: 5px;
-    font-size: large;
+  margin-right: 30px;
+  margin-top: 5px;
+  font-size: large;
+}
+
+.login {
+    display: flex;
+    height: 300px;
+    width: 450px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    background-color: white;
+    justify-content: center;
+    margin-left: 500px;
+    margin-top: 150px;
+    animation: loginPopup ease-in 600ms;
+}
+
+h1 {
+    font-size: xx-large;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+
+}
+
+.blueLine {
+    width: 100px;
+    height: 2.5px;
+    background-color: #4589ff;
+    border-radius: 5px;
+    align-items: center;
+    margin-left: 100px;
+
+}
+
+.form {
+    width: 300px;
+    height: 30px;
+    margin-top: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login-data {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-data input {
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+#e-mail {
+    background: url(../assets/img/EmailPlaceholder.png);
+    background-size: 15px;
+    background-position: 275px 10px;
+    background-repeat: no-repeat;
+    
+}
+
+#password {
+    background: url(../assets/img/PasswortPlaceholder.png);
+    background-size: 15px;
+    background-position: 275px 5px;
+    background-repeat: no-repeat;
+
+}
+
+.login-data input:focus {
+    outline: none;
+}
+
+.forgotPasswort {
+    text-decoration: none;
+    font-size: smaller;
+    margin-left: 30px;
+}
+
+.login-option {
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.remember-option {
+    display: flex;
+    justify-content: space-between;
+}
+span {
+    font-size: small;
+    margin-left: 7px;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+}
+
+.blueLogin {
+    background-color: #4589ff;
+    color: white;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-right: 10px;
+
+}
+
+.guestLogin {
+    color: grey;
+    border-radius: 5px;
+    border-color: grey;
+    border: 1px solid grey;
+    margin-left: 10px;
 }
