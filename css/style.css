@@ -3,7 +3,12 @@ html {
 }
 
 body {
-    margin: 0px;
+    margin: 0;
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
+
+}
+
+* {
+    box-sizing: border-box;
 }
