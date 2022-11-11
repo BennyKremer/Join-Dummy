@@ -1,1 +1,5 @@
-setURL("http://gruppe-373.developerakademie.com/smallest_backend_ever");
+setURL('https://gruppe-373.developerakademie.net/smallest_backend_ever');
+
+function render() {
+
+}
