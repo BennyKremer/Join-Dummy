@@ -12,7 +12,7 @@
 
 </head>
 
-<body>
+<body onload="updateHTML()">
     <div class="header">
         <img class="headerLogo" src="./assets/img/Capa1.png">
         <div class="rightHeader">
@@ -22,13 +22,38 @@
         </div>
     </div>
 
-    <div class="leftBar">
+    <div class="container">
         <div class="menuSection">
-            <span><img src="./assets/img/SummaryLogo.png">Summary</span>
-            <span><img src="./assets/img/BoardLogo.png">Board</span>
-            <span><img src="./assets/img/AddTaskLogo.png">Add Task</span>
-            <span><img src="./assets/img/SummaryLogo.png">Contacts</span>
+          <div>
+              <div><img src="./assets/img/SummaryLogo.png" /></div>
+              Summary
+          </div>
+          <div>
+              <div><img src="./assets/img/BoardLogo.png" /></div>
+              Board
+          </div>
+          <div>
+              <div><img src="./assets/img/AddTaskLogo.png" /></div>
+              Add Task
+          </div>
+          <div>
+              <div><img src="./assets/img/SummaryLogo.png" /></div>
+              Contacts
+          </div>
         </div>
+      </div>
+
+        <div class="searchButton">
+        <input class="searchField" type="text" placeholder="Search.." name="search">
+        <button class="submitSearch" type="submit"><i class="fa fa-search"></i></button>
+        </div>
+
+
+      <div class="draggableDiv">
+        <div class="dragHeadline"><b>To do</b><div class="drag-area" id="todo" ondrop="moveTo('Todo')" ondragover="allowDrop(event)"></div></div>
+        <div class="dragHeadline"><b>In progress</b><div class="drag-area" id="inProgress" ondrop="moveTo('In progress')" ondragover="allowDrop(event)"></div></div>
+        <div class="dragHeadline"><b>Await feedback</b><div class="drag-area" id="awaitFeedback" ondrop="moveTo('Await feedback')" ondragover="allowDrop(event)"></div></div>
+        <div class="dragHeadline"><b>Done</b><div class="drag-area" id="done" ondrop="moveTo('Done')" ondragover="allowDrop(event)"></div></div>
     </div>
 
 </body>
