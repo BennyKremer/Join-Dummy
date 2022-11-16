@@ -1,0 +1,191 @@
+.containerSummary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 150px;
+  
+}
+
+.firstSubContainer {
+    margin-top: 160px;
+    margin-bottom: 55px;
+}
+
+.summarySalutation {
+    width: 338px;
+    font-size: 48px;
+}
+
+.summaryName {
+    width: 385px;
+    font-size: 64px;
+    color: #4589ff;
+}
+
+.secondSubContainer {
+    display: flex;
+    gap: 35px;
+    margin-bottom: 35px;
+}
+
+.upcomingDeadlineBox {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+.upcomingDeadlineBoxDate {
+    width: 274px;
+    height: 40px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 120%;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.upcomingDeadlineBoxText {
+    width: 211px;
+    height: 28px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 120%;
+    color: #FFFFFF;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.secondSubContainerLeft {
+    width: 682px;
+    height: 191px;
+    border-radius: 30px;
+    padding: 28px 48px 28px 48px;
+    background-color: #4589ff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+    display: flex;
+    justify-content: space-around;
+}
+
+.tasksUrgent {
+    display: flex;
+    align-items:  center;
+    justify-content: space-around;
+}
+
+.border {
+    width: 0px;
+    height: 145px;
+    border: 3px solid #FFFFFF;
+
+}
+
+.imageUrgent {
+    width: 76px;
+    height: 76px;
+    border: 3px solid #FFFFFF;
+    border-radius: 100%;
+    
+}
+
+.secondSubContainerRight {
+    width: 208px;
+    height: 191px;
+    border-radius: 30px;
+    padding: 28px 48px 28px 48px;
+    background-color: #D2E3FF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+}
+
+.thirdSubContainer {
+    display: flex;
+    gap: 35px;
+}
+
+.fontDesignNumberBlack {
+    width: 28px;
+    height: 58px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    text-align: center;
+    color: #000000;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.fontDesignNumberWhite {
+    width: 28px;
+    height: 58px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    color: #FFFFFF;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.fontDesignTextWhite {
+    width: 140px;
+    height: 28px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 120%;
+    color: #FFFFFF;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.fontDesignTextBlue {
+    width: 75px;
+    height: 56px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 120%;
+    text-align: center;
+    color: #4589FF;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.summaryBoxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    width: 204px;
+    height: 219px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 30px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.summaryBoxSub {
+    display: flex;
+    align-items: center;
+}
