@@ -1,24 +1,10 @@
+* button {
+  border: unset;
+}
+
 /* header */
 /* USE ONLY FOR MODIFICATION (e.g. @media ()) */
 /* ------------------------------------------- */
-
-/* .header {
-}
-
-.headerLogo {
-}
-
-p {
-}
-
-.rightHeader {
-}
-
-.questionMark {
-}
-
-.headerPb {
-} */
 
 /*End of header*/
 .content {
@@ -26,19 +12,23 @@ p {
   display: relative;
 }
 
-aside .container {
-  max-width: 240px;
-} 
-
-
-section {
+form {
   display: flex;
   position: absolute;
   top: 100px;
   left: 240px;
 }
 
+.task_btn {
+  display: flex;
+  position: absolute;
+  bottom: 80px;
+  right: 116px;
+}
 
+aside .container {
+  max-width: 240px;
+}
 
 form {
   display: flex;
@@ -54,37 +44,192 @@ form > div {
   flex-direction: column;
 }
 
+/*=======================
+// Priority Buttons
+//=======================*/
 .priority_btn {
   flex-direction: row;
-  gap: .75rem;
+  gap: 0.75rem;
 }
 
-.priority_btn input  {
+/* BUTTON*/
+.priority_btn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--btn_font_size);
   width: 8.25rem;
-  /* box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16); */
-
-}
-.priority_btn input:nth-child(1)  {
-  border-bottom: 3px solid rgba(255, 61, 0, 1);
-}
-
-.priority_btn input:nth-child(2)  {
-  border-bottom: 3px solid rgba(255, 168, 0, 1);
+  height: 3.25rem;
+  padding: 1.125rem 0.625rem;
+  gap: 0.625rem;
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+  border-radius: 0.625rem;
 }
 
-.priority_btn input:nth-child(3)  {
-  border-bottom: 3px solid rgba(122, 226, 41, 1);
+.priority_btn > button > div {
+  display: flex;
+  /* background-color: white; */
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+.icon_prio {
+  mask-size: cover;
 }
 
-.form-control {
-  width: 26.375rem !important;
+.icon_prioUrgent_red {
+  -webkit-mask-image: url(../assets/svg/prioUrgent_red.svg);
+  mask-image: url(../assets/svg/prioUrgent_red.svg);
+  background: var(--btn_prio_red);
+  width: 20px;
+  height: 15px;
+}
+/* .icon_prioUrgent_red:hover {
+  background-color: rgba(255, 61, 0, .25);;
+} */
+
+.priority_btn button:nth-child(1):hover {
+  /* background-color: var(--btn_prio_red); */
+  border-bottom: 3px solid var(--btn_prio_red);
 }
 
-.form-control input[type="text"] {
-  font-size: 2.5rem !important;
+.icon_prioMedium_orange {
+  -webkit-mask-image: url(../assets/svg/prioMedium_orange.svg);
+  mask-image: url(../assets/svg/prioMedium_orange.svg);
+  background: var(--btn_prio_orange);
+  width: 20px;
+  height: 9px;
+}
+.priority_btn button:nth-child(2):hover {
+  border-bottom: 3px solid var(--btn_prio_orange);
+}
+
+.icon_prioLow_green {
+  -webkit-mask-image: url(../assets/svg/prioLow_green.svg);
+  mask-image: url(../assets/svg/prioLow_green.svg);
+  background: var(--btn_prio_green);
+  width: 20px;
+  height: 15px;
+}
+.priority_btn button:nth-child(3):hover {
+  border-bottom: 3px solid var(--btn_prio_green);
+}
+
+/* END Priority Buttons*/
+
+.input_form:focus-visible,
+.area_form:focus-visible {
+  outline: none;
+}
+
+.input_form {
+  display: block;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 0.375rem 0.75rem;
+  width: 26.375rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-bottom: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.area_form {
+  display: block;
+  margin: 10px 0;
+  padding: 0.375rem 0.75rem;
+  width: 26.375rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
 }
 
 label {
   font-size: 1.25rem;
   font-weight: 700;
 }
+/*=======================
+// Task Buttons
+//=======================*/
+
+.task_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 1.5rem;
+  margin: auto 7.25rem 5rem auto;
+}
+
+.task_btn img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.clear_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8.5rem;
+  height: 3.75rem;
+  gap: 0.2rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: transparent;
+  color: #647188;
+  border: 1px solid rgba(100, 113, 136, 1);
+}
+
+.clear_btn:hover {
+  transition: all 0.3s ease-in-out;
+  color: #4589ff;
+  border-color: rgba(69, 137, 255, 1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* onclick
+.clear_btn:hover {
+  transition: all 0.3s ease-in-out;
+  color: #005DFF;
+  border-color: rgba(0, 93, 255, 1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+} */
+
+.create_btn {
+  width: 11.25rem;
+  height: 3.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: #4589ff;
+  border-radius: 10px;
+  color: white;
+}
+
+.create_btn:hover {
+  background-color: #005dff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* onclick
+.create_btn:hover {
+  background-color: white;
+  color: #005DFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}*/

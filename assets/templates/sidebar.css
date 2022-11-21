@@ -1,46 +1,87 @@
 .container {
-    display: flex;
-    position:fixed;
-    left: 0px;
-    top: 100px;
-    flex-direction: column;
-    align-items: center;
-    padding: 66px 20px;
-    height: calc(100vh - 100px);
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-  }
+  display: flex;
+  position: fixed;
+  left: 0px;
+  top: 100px;
+  flex-direction: column;
+  align-items: center;
+  padding: 66px 20px;
+  height: calc(100vh - 100px);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
 
-  .menuSection {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 15px;
-  }
+.menuSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 15px;
+}
 
-  .menuSection > a {
-    display: flex;
-    background: #d2e3ff;
-    border-radius: 8px;
-    width: 100%;
-    padding: 8px 30px;
-    align-items: center;
-    gap: 15px;
-    color: black;
-    text-decoration: none;
-  }
+.menuSection > a {
+  display: flex;
+  background: rgb(210, 227, 255);
+  border-radius: 8px;
+  width: 100%;
+  padding: 8px 30px;
+  align-items: center;
+  gap: 15px;
+  color: black;
+  text-decoration: none;
+}
 
-  .menuSection > a > div {
-    display: flex;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    object-fit: contain;    
-  }
+.menuSection > a > div {
+  display: flex;
+  /* background-color: white; */
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
 
-  .menuSection img {
-    height: 100%;
-    width: 100%;
-  }
+.menuSection img {
+  height: 100%;
+  width: 100%;
+}
+
+
+.icon {
+  background-color: black;
+  mask-size: cover;
+}
+.icon:hover,
+.icon:focus {
+  background-color: red;
+}
+
+.icon-SummaryLogo {
+  -webkit-mask-image: url(../svg/SummaryLogo.svg);
+  mask-image: url(../svg/SummaryLogo.svg);
+  width: 23px;
+  height: 23px;
+}
+
+.icon-BoardLogo {
+  -webkit-mask-image: url(../svg/BoardLogo.svg);
+  mask-image: url(../svg/BoardLogo.svg);
+  width: 26px;
+  height: 22px;
+}
+
+.icon-AddTaskLogo {
+  -webkit-mask-image: url(../svg/AddTaskLogo.svg);
+  mask-image: url(../svg/AddTaskLogo.svg);
+  width: 31px;
+  height: 31px;
+}
+
+.icon-ContactsLogo {
+  -webkit-mask-image: url(../svg/ContactsLogo.svg);
+  mask-image: url(../svg/ContactsLogo.svg);
+  width: 20px;
+  height: 23px;
+}
+

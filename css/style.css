@@ -1,3 +1,22 @@
+:root {
+    --color_red: rgba(255,0, 0, 1);
+    --color_lime: rgba(0, 255, 0, 1);
+    --color_blue: rgba(0,0,255,1);
+  
+  
+    /* button-color */
+    /* #FF3D00 */
+    --btn_prio_red: rgba(255, 61, 0, 1);
+    /* #FFA800 */
+    --btn_prio_orange : rgba(255, 168, 0, 1);
+    /* #7AE229 */
+    --btn_prio_green: rgba(122, 226, 41, 1);
+    /* #FFFFFF */
+    --btn_prio_white: rgba(255, 255, 255, 1);
+  
+    --btn_font_size: 1.25rem;
+  }
+
 html {
     scroll-behavior: smooth;
 }
@@ -11,4 +30,8 @@ body {
 
 * {
     box-sizing: border-box;
+}
+
+p {
+    margin: 0;
 }

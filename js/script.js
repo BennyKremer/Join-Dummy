@@ -29,3 +29,11 @@ let date = new Date();
 function getCurrentYear() {
   document.getElementById("copyDate").innerHTML = ` ${date.getFullYear()} `;
 }
+
+function addClasslist(id, classElement) {
+  document.getElementById(id).classList.add(classElement);
+}
+
+function removeClasslist(id, classElement) {
+  document.getElementById(id).classList.remove(classElement);
+}
