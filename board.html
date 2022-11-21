@@ -5,51 +5,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Board</title>
-    <link rel="stylesheet" href="./css/board.css">
+    <title>Board | Join</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="./assets/img/favicon.png"
+      type="image/png"
+      sizes="32x32"
+    />
+
+    <!-- Cascading Style Sheets -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/addTask.css" />
+    <link rel="stylesheet" href="./css/board.css" />
+    <link rel="stylesheet" href="./assets/templates/header.css" />
+    <link rel="stylesheet" href="./assets/templates/sidebar.css" />
+
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/3f31cbef9c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JavaScript -->
+    <script src="./js/mini_backend.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/addTask.js"></script>
     <script src="./js/board.js"></script>
+  </head>
 
+<body onload="init(); updateHTML()">
+    <!-- HEADER -->
+    <!-- <header id="header"></header> -->
+    <div w3-include-html="./assets/templates/header.html"></div>
+    <!-- Content: Main and Sidebar -->
+    <div id="content" class="content">
+      <aside w3-include-html="./assets/templates/sidebar.html"></aside>
 
-</head>
-
-<body onload="updateHTML()">
-    <div class="header">
-        <img class="headerLogo" src="./assets/img/Capa1.png">
-        <div class="rightHeader">
-            <p>Kanban Project Management Tool</p>
-            <img class="questionMark" src="./assets/img/questionMark.png">
-            <img class="headerPb" src="./assets/img/christina-wocintechchat-com-0Zx1bDv5BNY-unsplash 1.png">
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="menuSection">
-          <div>
-              <div><img src="./assets/img/SummaryLogo.png" /></div>
-              Summary
-          </div>
-          <div>
-              <div><img src="./assets/img/BoardLogo.png" /></div>
-              Board
-          </div>
-          <div>
-              <div><img src="./assets/img/AddTaskLogo.png" /></div>
-              Add Task
-          </div>
-          <div>
-              <div><img src="./assets/img/SummaryLogo.png" /></div>
-              Contacts
-          </div>
-        </div>
-      </div>
-
-        <div class="searchButton">
-        <input class="searchField" type="text" placeholder="Search.." name="search">
-        <button class="submitSearch" type="submit"><i class="fa fa-search"></i></button>
-        </div>
-
-
-      <div class="draggableDiv">
+      <div  class="draggableDiv">
         <div class="dragHeadline"><b>To do</b><div class="drag-area" id="todo" ondrop="moveTo('Todo')" ondragover="allowDrop(event)"></div></div>
         <div class="dragHeadline"><b>In progress</b><div class="drag-area" id="inProgress" ondrop="moveTo('In progress')" ondragover="allowDrop(event)"></div></div>
         <div class="dragHeadline"><b>Await feedback</b><div class="drag-area" id="awaitFeedback" ondrop="moveTo('Await feedback')" ondragover="allowDrop(event)"></div></div>

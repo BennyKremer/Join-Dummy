@@ -43,6 +43,7 @@ let todos = [
 
 let currentDraggedElement;
 
+
 function updateHTML() {
   //Erster Todo Abschnitt
   let todo = todos.filter((t) => t["category"] == "Todo");
