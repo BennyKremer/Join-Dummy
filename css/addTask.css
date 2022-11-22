@@ -62,20 +62,34 @@ form > div {
   height: 3.25rem;
   padding: 1.125rem 0.625rem;
   gap: 0.625rem;
-  background: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
   border-radius: 0.625rem;
 }
 
+/* HOVER: set a border bottom */
+.priority_btn button:nth-child(1):hover {
+  border-bottom: 3px solid var(--btn_prio_red);
+}
+
+.priority_btn button:nth-child(2):hover {
+  border-bottom: 3px solid var(--btn_prio_orange);
+}
+
+.priority_btn button:nth-child(3):hover {
+  border-bottom: 3px solid var(--btn_prio_green);
+}
+
+/* DEFINE: prioBtnIcon */
 .priority_btn > button > div {
   display: flex;
-  /* background-color: white; */
   justify-content: center;
   align-items: center;
   width: 30px;
   height: 30px;
   object-fit: contain;
 }
+
 .icon_prio {
   mask-size: cover;
 }
@@ -83,42 +97,30 @@ form > div {
 .icon_prioUrgent_red {
   -webkit-mask-image: url(../assets/svg/prioUrgent_red.svg);
   mask-image: url(../assets/svg/prioUrgent_red.svg);
-  background: var(--btn_prio_red);
+  background-color: var(--btn_prio_red);
   width: 20px;
   height: 15px;
-}
-/* .icon_prioUrgent_red:hover {
-  background-color: rgba(255, 61, 0, .25);;
-} */
-
-.priority_btn button:nth-child(1):hover {
-  /* background-color: var(--btn_prio_red); */
-  border-bottom: 3px solid var(--btn_prio_red);
 }
 
 .icon_prioMedium_orange {
   -webkit-mask-image: url(../assets/svg/prioMedium_orange.svg);
   mask-image: url(../assets/svg/prioMedium_orange.svg);
-  background: var(--btn_prio_orange);
+  background-color: var(--btn_prio_orange);
   width: 20px;
   height: 9px;
 }
-.priority_btn button:nth-child(2):hover {
-  border-bottom: 3px solid var(--btn_prio_orange);
-}
+
 
 .icon_prioLow_green {
   -webkit-mask-image: url(../assets/svg/prioLow_green.svg);
   mask-image: url(../assets/svg/prioLow_green.svg);
-  background: var(--btn_prio_green);
+  background-color: var(--btn_prio_green);
   width: 20px;
   height: 15px;
 }
-.priority_btn button:nth-child(3):hover {
-  border-bottom: 3px solid var(--btn_prio_green);
-}
 
-/* END Priority Buttons*/
+/* END Priority Buttons
+ *-----------------------*/
 
 .input_form:focus-visible,
 .area_form:focus-visible {
@@ -178,11 +180,11 @@ label {
 
 .clear_btn {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   width: 8.5rem;
   height: 3.75rem;
-  gap: 0.2rem;
+  gap: 0.25rem;
   border-radius: 10px;
   font-size: 1.5rem;
   cursor: pointer;

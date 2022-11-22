@@ -76,7 +76,7 @@
 
           <div>
             <label>Category</label>
-            <select class="input_form" name="Category">
+            <select id="category" class="input_form" name="Category">
               <option type="checkbox">New Category</option>
               <option>Sales</option>
               <option>Backoffice</option>
@@ -84,29 +84,32 @@
           </div>
 
           <div class="priority_btn">
-            <button
-              type="button"
-              class="prio_Urgent"
-              id="prio_Urgent"
-              onclick="selectPrio(0)">
+            <button type="button" class="prio_Urgent" id="prio_Urgent" onclick="setPrioUrgent()">
               Urgent
-              <div><span class="icon_prio icon_prioUrgent_red"></span></div>
+              <div>
+                <span
+                  id="icon_prioUrgent_red"
+                  class="icon_prio icon_prioUrgent_red"
+                ></span>
+              </div>
             </button>
-            <button
-              type="button"
-              class="prioMedium"
-              id="prioMedium"
-              onclick="selectPrio(1)">
+            <button type="button" class="prio_Medium" id="prio_Medium" onclick="setPrioMedium()">
               Medium
-              <div><span class="icon_prio icon_prioMedium_orange"></span></div>
+              <div>
+                <span
+                  id="icon_prioMedium_orange"
+                  class="icon_prio icon_prioMedium_orange"
+                ></span>
+              </div>
             </button>
-            <button
-              type="button"
-              class="prio_Urgent"
-              id="prio_Urgent"
-              onclick="selectPrio(2)">
+            <button type="button" class="prio_Low" id="prio_Low" onclick="setPrioLow()">
               Low
-              <div><span class="icon_prio icon_prioLow_green"></span></div>
+              <div>
+                <span
+                  id="icon_prioLow_green"
+                  class="icon_prio icon_prioLow_green"
+                ></span>
+              </div>
             </button>
           </div>
 
@@ -117,8 +120,7 @@
               class="area_form"
               name="Description"
               placeholder="Enter a Description"
-              required
-            >
+              required>
             </textarea>
           </div>
 
@@ -129,29 +131,19 @@
               type="text"
               class="input_form"
               name="text_name"
-              placeholder="Add new subtask"
-            />
+              placeholder="Add new subtask"/>
           </div>
         </form>
         <div class="task_btn">
-          <!-- 
-                <input type="submit" class="task-btn" name="task" value="Clear" />
-                <input type="submit" class="task-btn" name="task" value="Create Task" 
-              -->
-          <button onclick="clearFormFields()" id="clear_btn" class="clear_btn">
+          <button id="clear_btn" class="clear_btn" onclick="clearFormFields()">
             <div>Clear</div>
-            <img src="./assets/img/cancel_black.png" />
-            <!-- <i class="fa-regular fa-xmark"></i> -->
+            <span class="iconTask"><i class="fa-solid fa-xmark"></i></span>
+            <!-- <img src="./assets/img/cancel_black.png" /> -->
           </button>
-          <button
-            onclick="addNewTask()"
-            id="create_btn"
-            class="create_btn"
-            type="submit"
-          >
+          <button id="create_btn" class="create_btn" type="submit" onclick="addNewTask()"> 
             <span>Create Task</span>
-            <img src="./assets/img/check_white.png" />
-            <!-- <i class="fa-regular fa-check"></i> -->
+            <span class="iconTask"><i class="fa-solid fa-check"></i></span>
+          <!-- <img src="./assets/img/check_white.png" /> -->
           </button>
         </div>
       </section>

@@ -7,7 +7,7 @@
   align-items: center;
   padding: 66px 20px;
   height: calc(100vh - 100px);
-  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(255, 255, 255); */
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -22,7 +22,7 @@
 
 .menuSection > a {
   display: flex;
-  background: rgb(210, 227, 255);
+  /* background: rgb(210, 227, 255); */
   border-radius: 8px;
   width: 100%;
   padding: 8px 30px;
@@ -41,20 +41,18 @@
   height: 30px;
   object-fit: contain;
 }
+.menuSection > a:hover {
+background-color: rgb(210, 227, 255);
+}
 
 .menuSection img {
   height: 100%;
   width: 100%;
 }
 
-
 .icon {
   background-color: black;
   mask-size: cover;
-}
-.icon:hover,
-.icon:focus {
-  background-color: red;
 }
 
 .icon-SummaryLogo {

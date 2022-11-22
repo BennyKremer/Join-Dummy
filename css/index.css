@@ -229,9 +229,13 @@ span {
 }
 
 .guestLogin {
-    color: grey;
     border-radius: 5px;
     border-color: grey;
     border: 1px solid grey;
     margin-left: 10px;
+}
+
+.guestLogin a{
+  text-decoration: none;
+  color: grey;
 }
