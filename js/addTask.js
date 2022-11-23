@@ -13,10 +13,17 @@ let subtask = document.getElementById("subtask");
 
 let tasks = [];
 
-function render() {}
+function render() {
+  loadArrayFromBackend();
+}
+
+function loadArrayFromBackend() {
+  // tasks = getArrayFromBackend('tasks');
+  tasks = JSON.parse(backend.getItem('tasks')) || [];
+}
 
 /**
- *
+ * function resetDataType (at work > not working properly)
  * @param {*} element
  */
 function resetDataType(element) {
@@ -123,7 +130,7 @@ function clearFormFields() {
   assign.selectedIndex = 0;
   dueDate.value = "";
   description.value = "";
-  subtask.selectedIndex = 0;
+  subtask.value = "";
 }
 //#endregion taskButtons
 
@@ -135,6 +142,7 @@ function clearFormFields() {
 
 async function backendServerStorage() {
   createTasks();
+  // setArrayToBackend("tasks",tasks);
   let tasksAsString = JSON.stringify(tasks);
   await backend.setItem("tasks", tasksAsString);
   clearFields();
@@ -142,9 +150,9 @@ async function backendServerStorage() {
 
 function setPrioStatus(){
   let status = '';
-  if (btnPrioUrgent) status = urgent;
-  if (btnPrioMedium) status = medium;
-  if (btnPrioLow) status = low;
+  if (btnPrioUrgent) status = "urgent";
+  if (btnPrioMedium) status = "medium";
+  if (btnPrioLow) status = "low";
   return status;
 }
 
@@ -183,6 +191,25 @@ function clearFields() {
   dueDate.value = "";
   description.value = "";
   subtask.selectedIndex = 0;
+}
+
+/**
+ * OnClick function for the button "Add task" in board.html
+ */
+ function createTaskForBoard() {
+  backendServerStorage();
+  document.getElementById('message').classList.remove('d_none');
+  setTimeout(() => {
+    window.location.href = 'board.html';
+  }, 1500);
+}
+
+/**
+ * OnClick function for the button "Create Task" in addTask.html
+ */
+async function createTaskForHtml() {
+  backendServerStorage();
+
 }
 //#endregion backendIntegration
 

@@ -20,7 +20,7 @@ async function includeHTML() {
 async function init() {
   await includeHTML();
   await downloadFromServer();
-  // render();
+  render();
   // getCurrentYear();
 }
 
@@ -36,4 +36,22 @@ function addClasslist(id, classElement) {
 
 function removeClasslist(id, classElement) {
   document.getElementById(id).classList.remove(classElement);
+}
+
+/**
+ * save Array To Backend
+ * @param {string} key 
+ * @param {array} array 
+ */
+async function setArrayToBackend(key, array) {
+  await backend.setItem(key, JSON.stringify(array));
+}
+
+/**
+ * load Array From Backend or a empty Array 
+ * @param {string} key 
+ * @returns 
+ */
+function getArrayFromBackend(key) {
+  return JSON.parse(backend.getItem(key)) || [];
 }
