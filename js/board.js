@@ -94,12 +94,12 @@ function startDragging(id) { //lässt Tasks nehmen
 }
 
 function generateTodoHTML(element) {  //Drag & Drop Element
-  return `<div onclick="todoPopup" draggable="true" class="todo" ondragstart="startDragging(${element["id"]})" >
+  return `<div onclick="showPopup()" draggable="true" class="todo" ondragstart="startDragging(${element["id"]})" >
               <div class="section">${element["section"]}</div> 
               <br>
               <div class="title"><b>${element["title"]}</b></div>
               <div><div class="description">${element["description"]}</div>
- ${showPopup(element)}
+ 
      </div> `;
 }
 

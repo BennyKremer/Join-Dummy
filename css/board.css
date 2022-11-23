@@ -76,7 +76,7 @@
 }
 
 .description {
-   opacity: 0.5;
+   color: grey;
 }
 
 .dragHeadline {
@@ -113,6 +113,7 @@
     position: fixed;
     justify-content: center;
     align-items: center;
+    border: 1px solid black;
 }
 
 .d-none {
@@ -141,3 +142,61 @@
     align-items: center;
 }
 
+@media (max-width: 480px) {
+    html {
+        max-width: 480px;
+    }
+
+    .rightHeader p {
+        display: none;
+    }
+
+    .questionMark {
+        display: none;
+    }
+
+    .rightSection {
+        display: flex;
+        flex-direction: column !important;
+    }
+    .searchSection {
+        flex-direction: column;
+    }
+    .searchField {
+        margin-left: 10px;
+    }
+
+    .draggableDiv {
+        flex-direction: column;
+        margin-left: 0px !important;
+    }
+    .drag-area {
+        min-height: auto !important;
+    }
+    .todo {
+        width: 300px;
+        height: 200px;
+    }
+    .menuSection {
+        
+        flex-direction: row !important;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: rgb(240, 240, 240);
+        gap: 0px !important;
+        opacity: 1;
+        height: 50px;
+        padding-top: 20px !important;
+    }
+    .menuSection a {
+        padding: 0px !important;
+        gap: 0px !important;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        box-shadow: none !important;
+    }
+}
