@@ -89,24 +89,42 @@ function updateHTML() {
   }
 }
 
-function startDragging(id) {
+function startDragging(id) { //lässt Tasks nehmen
   currentDraggedElement = id;
 }
 
-function generateTodoHTML(element) {
-  return `<div draggable="true" class="todo" ondragstart="startDragging(${element["id"]})" >
+function generateTodoHTML(element) {  //Drag & Drop Element
+  return `<div onclick="todoPopup" draggable="true" class="todo" ondragstart="startDragging(${element["id"]})" >
               <div class="section">${element["section"]}</div> 
               <br>
               <div class="title"><b>${element["title"]}</b></div>
               <div><div class="description">${element["description"]}</div>
+ ${showPopup(element)}
      </div> `;
 }
 
-function allowDrop(ev) {
+function showPopup(element) {
+    return `<div id="popUp${element['id']}" class="popUp d-none">
+    <div class="popipTodoInfo"> </div>
+    </div> `;
+}
+
+function allowDrop(ev) { // lässt Task im neuen Feld
   ev.preventDefault();
 }
 
-function moveTo(category) {
+function moveTo(category) { //Draggable Area
   todos[currentDraggedElement]["category"] = category;
   updateHTML();
 }
+
+function openTodoInfo(id) {  //öffnet Popup
+    document.getElementById(id).classList.remove('d-none');
+}
+
+function closeTodoInfo(id, event) { //schließt Popup
+    document.getElementById(id).classList.add('d-none');
+    event.stopPropagation();
+}
+
+
