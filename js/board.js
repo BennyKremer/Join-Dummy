@@ -94,7 +94,7 @@ function startDragging(id) { //lässt Tasks nehmen
 }
 
 function generateTodoHTML(element) {  //Drag & Drop Element
-  return `<div onclick="showPopup()" draggable="true" class="todo" ondragstart="startDragging(${element["id"]})" >
+  return `<div onclick="showPopup(${element['id']})" draggable="true" class="todo" ondragstart="startDragging(${element["id"]})" >
               <div class="section">${element["section"]}</div> 
               <br>
               <div class="title"><b>${element["title"]}</b></div>
@@ -103,11 +103,39 @@ function generateTodoHTML(element) {  //Drag & Drop Element
      </div> `;
 }
 
-function showPopup(element) {
-    return `<div id="popUp${element['id']}" class="popUp d-none">
-    <div class="popipTodoInfo"> </div>
-    </div> `;
+function loadArrayFromBackend() {
+    todos = JSON.parse(backend.getItem('tasks')) || [];
 }
+
+function showPopup(i) {
+document.getElementById('popUp').classList.remove('d-none');
+document.getElementById('popUpInfo').innerHTML = popUpInfo(i);
+}
+
+
+function popUpInfo(i){
+    return `
+    <div class="popupFull">
+        <h1>${todos[i]['section']}</h1>
+            <div class="titlePopup">${todos[i]['title']}</div>
+                <div class="descriptionPopup">${todos[i]['description']}</div>
+                    <button onclick="closeTodoInfo('popUp${todos['id']}', event)" class="closeBtn">
+                        <img src="../assets/img/closeBtn.png">
+                    </button>
+                    <button onclick="editTask" class="editTask">
+                        <img src="../assets/img/pencilEdit.png">
+                    </button>..
+    </div>
+
+    `
+
+}
+
+function editTask() { //edit Button
+
+}
+
+
 
 function allowDrop(ev) { // lässt Task im neuen Feld
   ev.preventDefault();

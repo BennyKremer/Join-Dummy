@@ -33,7 +33,7 @@
 }
 
 
-.bo_title {
+.title {
     margin-bottom: 8px;
 }
 
@@ -109,11 +109,17 @@
 }
 
 .popUp {
-    display: flex;
-    position: fixed;
+    position: absolute;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid rgb(212, 212, 212);
+    height: 35rem;
+    margin-left: 500px;
+    width: 77vh;
+    margin-top: -667px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: white;
 }
 
 .d-none {
@@ -133,6 +139,7 @@
     text-align: center;
     background-color: #4589FF;
     font-size: large;
+    cursor: pointer;
 }
 
 .searchSection {
@@ -141,6 +148,62 @@
     justify-content: flex-start;
     align-items: center;
 }
+
+h1 {
+    display: flex;
+    background-color: orange;
+    border-radius: 7px;
+    width: 100px;
+    color: white;
+    font-size: medium;
+    text-align: center;
+    height: 23px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.titlePopup {
+    display: flex;
+    text-align: start;
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.descriptionPopup {
+    display: flex;
+    margin-left: 30px;
+    margin-top: 30px;
+    text-align: start;
+    padding-right: 20px;
+}
+
+.closeBtn {
+    display: flex;
+    margin-left: 490px;
+    margin-top: -152px;
+    background-color: white;
+    cursor: pointer;
+    
+}
+
+.editTask {
+    height: 40px;
+    width: 40px;
+    background-color: #005DFF;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 440px;
+    margin-left: 476px;
+    cursor: pointer;
+}
+
+/*---------------------------*/
 
 @media (max-width: 480px) {
     html {
@@ -187,7 +250,7 @@
         background-color: rgb(240, 240, 240);
         gap: 0px !important;
         opacity: 1;
-        height: 50px;
+        height: 80px;
         padding-top: 20px !important;
     }
     .menuSection a {
@@ -195,8 +258,13 @@
         gap: 0px !important;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
     }
     .container {
         box-shadow: none !important;
     }
+
+
+
+
 }
