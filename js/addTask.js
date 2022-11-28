@@ -15,11 +15,11 @@ let tasks = [];
 
 function render() {
   loadArrayFromBackend();
+  clearFields();
 }
 
 function loadArrayFromBackend() {
-  // tasks = getArrayFromBackend('tasks');
-  tasks = JSON.parse(backend.getItem('tasks')) || [];
+  tasks = getArrayFromBackend('tasks');
 }
 
 /**
@@ -142,9 +142,7 @@ function clearFormFields() {
 
 async function backendServerStorage() {
   createTasks();
-  // setArrayToBackend("tasks",tasks);
-  let tasksAsString = JSON.stringify(tasks);
-  await backend.setItem("tasks", tasksAsString);
+  setArrayToBackend("tasks",tasks);
   clearFields();
 }
 
@@ -157,40 +155,42 @@ function setPrioStatus(){
 }
 
 function createTasks() {
-  let enterTitle = document.getElementById("enter_title").value;
-  let assign = document.getElementById("assign").value;
-  let dueDate = document.getElementById("due_date").value;
-  let category = document.getElementById("category").value;
-  let description = document.getElementById("description").value;
-  let subtask = document.getElementById("subtask").value;
+  // let enterTitle = document.getElementById("enter_title");
+  // let assign = document.getElementById("assign");
+  // let dueDate = document.getElementById("due_date");
+  // let category = document.getElementById("category");
+  // let description = document.getElementById("description");
+  // let subtask = document.getElementById("subtask");
   let prioStat = setPrioStatus();
 
   let task = {
-    title: enterTitle,
-    assign: assign,
-    date: dueDate,
-    category: category,
+    title: enterTitle.value,
+    assign: assign.value,
+    date: dueDate.value,
+    category: category.value,
     prio: prioStat,
-    description: description,
-    subtask: subtask,
+    description: description.value,
+    subtask: subtask.value,
     board_category: "todo",
   };
 
   tasks.push(task);
+  console.log(tasks);
 }
 
 function clearFields() {
-  let enterTitle = document.getElementById("enter_title");
-  let assign = document.getElementById("assign");
-  let dueDate = document.getElementById("due_date");
-  let description = document.getElementById("description");
-  let subtask = document.getElementById("subtask");
+  // let enterTitle = document.getElementById("enter_title");
+  // let assign = document.getElementById("assign");
+  // let dueDate = document.getElementById("due_date");
+  // let description = document.getElementById("description");
+  // let subtask = document.getElementById("subtask");
 
   enterTitle.value = "";
   assign.selectedIndex = 0;
   dueDate.value = "";
+  category.selectedIndex = 0;
   description.value = "";
-  subtask.selectedIndex = 0;
+  subtask.value = "";
 }
 
 /**
@@ -209,7 +209,6 @@ function clearFields() {
  */
 async function createTaskForHtml() {
   backendServerStorage();
-
 }
 //#endregion backendIntegration
 

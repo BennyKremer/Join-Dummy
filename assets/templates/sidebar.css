@@ -1,21 +1,22 @@
-.container {
+.s_container {
   display: flex;
   position: fixed;
   left: 0px;
   top: 100px;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   padding: 66px 20px;
   height: calc(100vh - 100px);
-  /* background-color: rgb(255, 255, 255); */
+  /* background-color: rgb(255, 0, 0); */
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
 }
 
 .menuSection {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
   padding: 0px;
   gap: 15px;
 }
@@ -43,11 +44,6 @@
 }
 .menuSection > a:hover {
 background-color: rgb(210, 227, 255);
-}
-
-.menuSection img {
-  height: 100%;
-  width: 100%;
 }
 
 .icon {
@@ -83,3 +79,44 @@ background-color: rgb(210, 227, 255);
   height: 23px;
 }
 
+
+.legalSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  /* padding: auto 0px 0px; */
+  gap: 15px;
+}
+
+.legalSection > a {
+  display: flex;
+  /* background: rgb(210, 227, 255); */
+  border-radius: 8px;
+  width: 100%;
+  padding: 8px 30px;
+  align-items: center;
+  gap: 15px;
+  color: black;
+  text-decoration: none;
+}
+
+.legalSection > a > div {
+  display: flex;
+  /* background-color: white; */
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+.legalSection > a:hover {
+background-color: rgb(210, 227, 255);
+}
+
+.icon-legalLogo {
+  -webkit-mask-image: url(../svg/legalLogo.svg);
+  mask-image: url(../svg/legalLogo.svg);
+  width: 20px;
+  height: 21px;
+}

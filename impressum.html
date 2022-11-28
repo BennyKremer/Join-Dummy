@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy | Join</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="./assets/img/favicon.png"
+      type="image/png"
+      sizes="32x32"
+    />
+
+    <!-- Cascading Style Sheets -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/impressum.css" />
+    <link rel="stylesheet" href="./assets/templates/header.css" />
+    <link rel="stylesheet" href="./assets/templates/sidebar.css" />
+    <link rel="stylesheet" href="./assets/templates/footer.css" />
+
+    <!-- JavaScript -->
+    <script src="./js/mini_backend.js"></script>
+    <script src="./js/script.js"></script>
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/3f31cbef9c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body onload="init()">
+    <!-- HEADER -->
+    <!-- <header id="header"></header> -->
+    <div w3-include-html="./assets/templates/header.html"></div>
+    <!-- Content: Main and Sidebar -->
+    <div id="content" class="content">
+      <aside w3-include-html="./assets/templates/sidebar.html"></aside>
+    <div class="impressum_page">
+        <!-- Impressum -->
+        <div class='impressum'>
+            <h1>Impressum</h1>
+            <p>Angaben gemäß § 5 TMG</p>
+            <p>Martin Dalić<br>
+                Geltinger Str. 3<br>
+                81379 München <br>
+            </p>
+            <p> <strong>Vertreten durch: </strong><br>
+                Martin Dalić<br>
+            </p>
+            <p><strong>Kontakt:</strong> <br>
+                Telefon: 089-37956498<br>
+                E-Mail: <a href='mailto:Martin.Dalic@gmail.com'>Martin.Dalic@gmail.com</a></br></p><br>
+            Website Impressum von <a href="https://www.impressum-generator.de">impressum-generator.de</a>
+        </div>
+
+    </div>
+    <footer w3-include-html="./assets/templates/footer.html"></footer>
+</div>
+</body>
+</html>
