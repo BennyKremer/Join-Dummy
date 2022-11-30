@@ -103,28 +103,49 @@ function generateTodoHTML(element) {  //Drag & Drop Element
      </div> `;
 }
 
-function loadArrayFromBackend() {
+function loadArrayFromBackend() { //holt die Tasks vom Backend
     todos = JSON.parse(backend.getItem('tasks')) || [];
 }
 
-function showPopup(i) {
-document.getElementById('popUp').classList.remove('d-none');
-document.getElementById('popUpInfo').innerHTML = popUpInfo(i);
+function showPopup(i) {   //Zeigt den Board- Hauptpopup an
+  document.getElementById('popUp').classList.remove('d-none');
+  document.getElementById('popUpInfo').innerHTML = popUpInfo(i);
+}
+
+function addTaskBtn(i) {  //Zeigt den Sidepopup an
+  document.getElementById('sidePopUp').classList.add('d-none');
+  document.getElementById('sidePopUpInfo').innerHTML = sidePopUpInfo(i);
+}
+
+function sidePopUpInfo(i) { //Sidepopup Container
+  document.getElementById('addBtn').innerHTML += `
+  <div class="sidePopupFull">
+  <h1>Test</h1>
+  </div>
+  `
+}
+
+function addTaskBtn(i) {
+  document.getElementById('sidePopUp').innerHTML += `
+  <div class="sidePopupFull">
+  <h1>Test</h1>
+  </div>
+  `
 }
 
 
-function popUpInfo(i){
+function popUpInfo(i){ //Hauptpopup Container
     return `
-    <div class="popupFull">
+    <div class="popUpFull" id="popUpFull">
         <h1>${todos[i]['section']}</h1>
             <div class="titlePopup">${todos[i]['title']}</div>
                 <div class="descriptionPopup">${todos[i]['description']}</div>
-                    <button onclick="closeTodoInfo('popUp${todos['id']}', event)" class="closeBtn">
-                        <img src="../assets/img/closeBtn.png">
+                    <button onclick="closeTodo('popUp${todos['id']}', event)" class="closeBtn">
+                        <img src="./assets/img/closeBtn.png">
                     </button>
                     <button onclick="editTask" class="editTask">
-                        <img src="../assets/img/pencilEdit.png">
-                    </button>..
+                        <img src="./assets/img/pencilEdit.png">
+                    </button>
     </div>
 
     `
@@ -133,6 +154,11 @@ function popUpInfo(i){
 
 function editTask() { //edit Button
 
+}
+
+function closeTodo(i) {
+  getElementById('popUpFull').classList.remove('d-none');
+  generateTodoHTML(i);
 }
 
 

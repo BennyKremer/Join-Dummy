@@ -47,7 +47,12 @@
       <div class="rightSection">
         <div class="searchSection">
       <input type="text" class="searchField" id="searchField" onkeyup="myFunction()" placeholder="Find Task.." title="Type in a name">
-      <button class="addBtn" onclick="addTaskBtn">Add Task &nbsp;<b>+</b></button>
+      <button class="addBtn" id="addBtn" onclick="addTaskBtn(i)">Add Task &nbsp;<b>+</b>
+      </button>
+
+      <div id="sidePopUp" class="sidePopUp">
+        <div class="sidePopUpInfo" id="sidePopUpInfo"></div>
+      </div>
     </div>
       <div  class="draggableDiv">
         <div class="dragHeadline"><b>To do</b><div class="drag-area" id="todo" ondrop="moveTo('Todo')" ondragover="allowDrop(event)"></div></div>
@@ -59,6 +64,7 @@
 <div id="popUp" class="popUp d-none">
     <div class="popUpTodoInfo" id="popUpInfo"> </div>
     </div>
+
 </body>
 
 </html>

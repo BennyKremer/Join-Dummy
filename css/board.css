@@ -6,6 +6,8 @@
     margin: 5px;
     margin-top: 20px;
     cursor: pointer;
+    min-width: 200px;
+    min-height: 200px;
 }
 
 .drag-area {
@@ -120,6 +122,21 @@
     border-radius: 20px;
     text-align: center;
     background-color: white;
+}
+
+.sidePopUp {
+    position: absolute;
+    justify-content: flex-end;
+    align-items: center;
+    width: 450px;
+    height: 100vh;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 1px solid rgb(230, 230, 230);
+    background-color: rgb(252, 252, 252);
+    top: 0px;
+    right: 0px;
+
 }
 
 .d-none {
@@ -251,7 +268,7 @@ h1 {
         gap: 0px !important;
         opacity: 1;
         height: 80px;
-        padding-top: 20px !important;
+
     }
     .menuSection a {
         padding: 0px !important;
@@ -260,11 +277,21 @@ h1 {
         align-items: center;
         flex-direction: column;
     }
+
     .container {
         box-shadow: none !important;
     }
 
+    .header {
+        max-width: 480px !important;
+    }
 
+    .legalSection {
+        display: none !important;
+    }
+    aside {
+        display: flex !important;
+    }
 
 
 }
