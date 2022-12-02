@@ -102,7 +102,6 @@ aside .container {
   height: 9px;
 }
 
-
 .icon_prioLow_green {
   -webkit-mask-image: url(../assets/svg/prioLow_green.svg);
   mask-image: url(../assets/svg/prioLow_green.svg);
@@ -228,14 +227,43 @@ label {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }*/
 
-@media (max-width: 880px) {
-  
-  aside {
+/*=======================
+// Responsiveness
+//=======================*/
+
+@media screen and (max-width: 880px) {
+  /* aside {
     display: none;  
   }
 
   footer {
     display: block !important;
+  } */
+
+  .s_container {
+    box-shadow: none !important;
+  }
+
+  .legalSection {
+    display: none !important;
+  }
+
+  .menuSection {
+    flex-direction: row !important;
+    justify-content: center !important;
+    position: fixed;
+    left: 0px;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255, 1);
+    height: 80px;
+    gap: 0px !important;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+  }
+  .menuSection > a {
+    flex-direction: column;
+    padding: 0px !important;
+    gap: 0px !important;
   }
 
   .form_container {
@@ -250,9 +278,7 @@ label {
 
   .task_btn {
     width: 100%;
-    margin: auto auto 5rem ;
+    margin: auto auto 5rem;
     right: 0px;
   }
-
-  
 }
