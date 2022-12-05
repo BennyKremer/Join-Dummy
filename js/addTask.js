@@ -7,20 +7,28 @@ let createBtn = document.getElementById("create_btn");
 let enterTitle = document.getElementById("enter_title");
 let assign = document.getElementById("assign");
 let dueDate = document.getElementById("due_date");
+let category = document.getElementById("category");
 let description = document.getElementById("description");
 let select = document.getElementById("select");
 let subtask = document.getElementById("subtask");
 
 let tasks = [];
+// function not finished yet 
+// >> timeStamp, uploading the website on the ftp-server
+// let firstLoad = true;
+// let timeStamp = new Date()
+// if (window.location.hostname != '127.0.0.1') && (firstLoad) {
+//   console.log timeStamp.getDate.;
+// }
+
 
 function render() {
   loadArrayFromBackend();
   clearFields();
 }
 
-function loadArrayFromBackend() {
-  tasks = getArrayFromBackend('tasks');
-}
+
+
 
 /**
  * function resetDataType (at work > not working properly)
@@ -46,6 +54,7 @@ function resetDataType(element) {
       console.log("Error: Unknown");
   }
 }
+
 /*=======================
 // Priority Buttons
 //=======================*/
@@ -139,6 +148,9 @@ function clearFormFields() {
 //=======================*/
 //#region backendIntegration
 
+function loadArrayFromBackend() {
+  tasks = getArrayFromBackend('tasks');
+}
 
 async function backendServerStorage() {
   createTasks();
@@ -155,12 +167,6 @@ function setPrioStatus(){
 }
 
 function createTasks() {
-  // let enterTitle = document.getElementById("enter_title");
-  // let assign = document.getElementById("assign");
-  // let dueDate = document.getElementById("due_date");
-  // let category = document.getElementById("category");
-  // let description = document.getElementById("description");
-  // let subtask = document.getElementById("subtask");
   let prioStat = setPrioStatus();
 
   let task = {
@@ -179,12 +185,6 @@ function createTasks() {
 }
 
 function clearFields() {
-  // let enterTitle = document.getElementById("enter_title");
-  // let assign = document.getElementById("assign");
-  // let dueDate = document.getElementById("due_date");
-  // let description = document.getElementById("description");
-  // let subtask = document.getElementById("subtask");
-
   enterTitle.value = "";
   assign.selectedIndex = 0;
   dueDate.value = "";
@@ -211,10 +211,3 @@ async function createTaskForHtml() {
   backendServerStorage();
 }
 //#endregion backendIntegration
-
-/*=======================
-// Responsiveness
-//=======================*/
-//#region Responsiveness
-
-//#endregion Responsiveness

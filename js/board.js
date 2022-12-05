@@ -41,6 +41,13 @@ let todos = [
   }
 ];
 
+setURL("https://gruppe-373.developerakademie.net/smallest_backend_ever");
+
+function render(){
+  loadArrayFromBackend();
+  updateHTML()
+}
+
 let currentDraggedElement;
 
 

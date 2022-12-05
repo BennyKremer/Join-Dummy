@@ -7,16 +7,25 @@
   
     /* button-color */
     /* #FF3D00 */
-    --btn_prio_red: rgba(255, 61, 0, 1);
+    --btn_prio_red:    rgba(255, 61, 0, 1);
     /* #FFA800 */
-    --btn_prio_orange : rgba(255, 168, 0, 1);
+    --btn_prio_orange: rgba(255, 168, 0, 1);
     /* #7AE229 */
-    --btn_prio_green: rgba(122, 226, 41, 1);
+    --btn_prio_green:  rgba(122, 226, 41, 1);
     /* #FFFFFF */
-    --btn_prio_white: rgba(255, 255, 255, 1);
-  
+    --btn_prio_white:  rgba(255, 255, 255, 1);
+
     --btn_font_size: 1.25rem;
-  }
+    
+    /* Category Colors */
+    --cat_color_orange:     rgba(255, 138, 0, 1);
+    --cat_color_lightblue:  rgba(138, 164, 255, 1);
+    --cat_color_red:        rgba(255, 0, 0, 1);
+    --cat_color_applegreen: rgba(42, 211, 0, 1);
+    --cat_color_magenta:    rgba(226, 0, 190, 1);
+    --cat_color_brightblue: rgba(0, 56, 255, 1);
+    /* --timestamp */
+}
 
 html {
     scroll-behavior: smooth;
@@ -26,7 +35,6 @@ body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
-
 }
 
 * {
@@ -36,3 +44,39 @@ body {
 p {
     margin: 0;
 }
+
+/*=======================
+// Responsiveness
+//=======================*/
+/* Extra small devices (phones, 600px and down) 
+ *   xs   */
+ @media only screen and (max-width: 600px) {}
+
+ /* Small devices (portrait tablets and large phones, 600px and up)
+  *   s   */
+ @media only screen and (min-width: 600px) {}
+ 
+ /* Medium devices (landscape tablets, 768px and up)
+  *   m   */
+ @media only screen and (min-width: 768px) {}
+ 
+ /* Large devices (laptops/desktops, 992px and up)
+  *   l   */
+ @media only screen and (min-width: 992px) {}
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up)
+  *   xl   */
+ @media only screen and (min-width: 1200px) {}
+
+     /* media-query width */
+    /**
+     --media_width_small: 480px;
+     --media_width_medium: 768px;
+     --media_width_large: 1200px;
+ 
+     --media_width_xs: 480px;
+     --media_width_s:  600px;
+     --media_width_m:  768px;
+     --media_width_l:  992px;
+     --media_width_xl: 1200px;
+     */
