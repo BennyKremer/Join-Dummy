@@ -43,9 +43,10 @@ let todos = [
 
 setURL("https://gruppe-373.developerakademie.net/smallest_backend_ever");
 
-function render(){
+async function render(){
+
   loadArrayFromBackend();
-  updateHTML()
+  updateHTML();
 }
 
 let currentDraggedElement;
@@ -53,46 +54,46 @@ let currentDraggedElement;
 
 function updateHTML() {
   //Erster Todo Abschnitt
-  let todo = todos.filter((t) => t["category"] == "Todo");
+  let todo = todos.filter((t) => t["board_category"] == "todo");
 
   document.getElementById("todo").innerHTML = "";
 
   for (let index = 0; index < todo.length; index++) {
     const element = todo[index];
 
-    document.getElementById("todo").innerHTML += generateTodoHTML(element);
+    document.getElementById("todo").innerHTML += generateTodoHTML(index, element);
   }
 
   //Zweiter Todo Abschnitt
-  let inProgress = todos.filter((t) => t["category"] == "In progress");
+  let inProgress = todos.filter((t) => t["board_category"] == "progress");
 
   document.getElementById("inProgress").innerHTML = "";
 
   for (let index = 0; index < inProgress.length; index++) {
     const element = inProgress[index];
     document.getElementById("inProgress").innerHTML +=
-      generateTodoHTML(element);
+      generateTodoHTML(index, element);
   }
 
   //Dritter Todo Abschnitt
-  let awaitFeedback = todos.filter((t) => t["category"] == "Await feedback");
+  let awaitFeedback = todos.filter((t) => t["board_category"] == "feedback");
 
   document.getElementById("awaitFeedback").innerHTML = "";
 
   for (let index = 0; index < awaitFeedback.length; index++) {
     const element = awaitFeedback[index];
     document.getElementById("awaitFeedback").innerHTML +=
-      generateTodoHTML(element);
+      generateTodoHTML(index, element);
   }
 
   //Vierter Todo Abschnitt
-  let done = todos.filter((t) => t["category"] == "Done");
+  let done = todos.filter((t) => t["board_category"] == "done");
 
   document.getElementById("done").innerHTML = "";
 
   for (let index = 0; index < done.length; index++) {
     const element = done[index];
-    document.getElementById("done").innerHTML += generateTodoHTML(element);
+    document.getElementById("done").innerHTML += generateTodoHTML(index, element);
   }
 }
 
@@ -100,9 +101,9 @@ function startDragging(id) { //lässt Tasks nehmen
   currentDraggedElement = id;
 }
 
-function generateTodoHTML(element) {  //Drag & Drop Element
-  return `<div onclick="showPopup(${element['id']})" draggable="true" class="todo" ondragstart="startDragging(${element["id"]})" >
-              <div class="section">${element["section"]}</div> 
+function generateTodoHTML(index, element) {  //Drag & Drop Element
+  return `<div onclick="showPopup(${index})" draggable="true" class="todo" ondragstart="startDragging(${index})" >
+              <div class="section">${element["category"]}</div> 
               <br>
               <div class="title"><b>${element["title"]}</b></div>
               <div><div class="description">${element["description"]}</div>
@@ -125,19 +126,16 @@ function addTaskBtn(i) {  //Zeigt den Sidepopup an
 }
 
 function sidePopUpInfo(i) { //Sidepopup Container
-  document.getElementById('addBtn').innerHTML += `
-  <div class="sidePopupFull">
-  <h1>Test</h1>
-  </div>
-  `;
+
 }
 
 function addTaskBtn(i) {
-  document.getElementById('sidePopUp').innerHTML += `
-  <div class="sidePopupFull">
-  <h1>Test</h1>
-  </div>
-  `;
+  document.getElementById('sidePopUp').classList.remove('d-none');
+  
+}
+
+function closeSideTask() {
+  document.getElementById('sidePopUp').classList.add('d-none');
 }
 
 
@@ -150,7 +148,7 @@ function popUpInfo(i){ //Hauptpopup Container
                     <button onclick="closeTodo('popUp${todos['id']}', event)" class="closeBtn">
                         <img src="./assets/img/closeBtn.png">
                     </button>
-                    <button onclick="editTask" class="editTask">
+                    <button onclick="editTask()" class="editTask">
                         <img src="./assets/img/pencilEdit.png">
                     </button>
     </div>
@@ -160,12 +158,11 @@ function popUpInfo(i){ //Hauptpopup Container
 }
 
 function editTask() { //edit Button
-
+  document.getElementById('')
 }
 
-function closeTodo(i) {
-  getElementById('popUpFull').classList.remove('d-none');
-  generateTodoHTML(i);
+function closeTodo() {
+  document.getElementById('popUp').classList.add('d-none');
 }
 
 
@@ -175,7 +172,7 @@ function allowDrop(ev) { // lässt Task im neuen Feld
 }
 
 function moveTo(category) { //Draggable Area
-  todos[currentDraggedElement]["category"] = category;
+  todos[currentDraggedElement]["board_category"] = category;
   updateHTML();
 }
 
@@ -187,5 +184,10 @@ function closeTodoInfo(id, event) { //schließt Popup
     document.getElementById(id).classList.add('d-none');
     event.stopPropagation();
 }
+
+function createTask() {
+  
+}
+
 
 

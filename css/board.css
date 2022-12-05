@@ -24,8 +24,6 @@
     margin-left: 15px;
     margin-right: 15px;
     font-size: medium;
-
-
 }
 
 .draggableDiv {
@@ -74,7 +72,7 @@
 
 .title {
     font-size: large;
-    color: #005DFF;
+    color: #4589FF;
 }
 
 .description {
@@ -118,7 +116,7 @@
     height: 35rem;
     margin-left: 500px;
     width: 77vh;
-    margin-top: -667px;
+    margin-top: -2932px;
     border-radius: 20px;
     text-align: center;
     background-color: white;
@@ -126,9 +124,7 @@
 
 .sidePopUp {
     position: absolute;
-    justify-content: flex-end;
-    align-items: center;
-    width: 450px;
+    width: 400px;
     height: 100vh;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -140,7 +136,7 @@
 }
 
 .d-none {
-    display: none;
+    display: none !important;
 }
 
 .addBtn {
@@ -157,6 +153,7 @@
     background-color: #4589FF;
     font-size: large;
     cursor: pointer;
+    border: none;
 }
 
 .searchSection {
@@ -204,13 +201,14 @@ h1 {
     margin-top: -152px;
     background-color: white;
     cursor: pointer;
+    border: none;
     
 }
 
 .editTask {
     height: 40px;
     width: 40px;
-    background-color: #005DFF;
+    background-color: #4589FF;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -219,6 +217,45 @@ h1 {
     margin-left: 476px;
     cursor: pointer;
 }
+
+
+.closeSideTask {
+    border: none;
+    display: flex;
+    background-color: white;
+    margin-top: 20px;
+    margin-left: 350px;
+    cursor: pointer;
+
+}
+
+h2 {
+    margin-left: 24px;
+    font-size: 40px;
+}
+
+.sidePopupHead {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.createTaskBtn {
+    height: 40px;
+    width: 120px;
+    color: white;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #4589FF;
+    font-size: medium;
+    cursor: pointer;
+    border: none;
+    margin-right: 30px;
+}
+
 
 /*---------------------------*/
 

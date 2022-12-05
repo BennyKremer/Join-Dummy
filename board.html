@@ -50,15 +50,25 @@
       <button class="addBtn" id="addBtn" onclick="addTaskBtn()">Add Task &nbsp;<b>+</b>
       </button>
 
-      <div id="sidePopUp" class="sidePopUp">
-        <div class="sidePopUpInfo" id="sidePopUpInfo"></div>
+      <div id="sidePopUp" class="sidePopUp d-none">
+        <div class="sidePopUpInfo" id="sidePopUpInfo">
+          <button class="closeSideTask" id="closeSideTask" onclick="closeSideTask()">
+          <img class="closeX" src="./assets/img/closeBtn.png">
+        </button>
+
+        <div class="sidePopupHead">
+          <h2><b>Add Task</b></h2>
+          <button class="createTaskBtn" id="createTaskBtn" onclick="createTask()">Create Task &nbsp;<b>✓</b></button>
+        </div>
+
+        </div>
       </div>
     </div>
       <div  class="draggableDiv">
-        <div class="dragHeadline"><b>To do</b><div class="drag-area" id="todo" ondrop="moveTo('Todo')" ondragover="allowDrop(event)"></div></div>
-        <div class="dragHeadline"><b>In progress</b><div class="drag-area" id="inProgress" ondrop="moveTo('In progress')" ondragover="allowDrop(event)"></div></div>
-        <div class="dragHeadline"><b>Await feedback</b><div class="drag-area" id="awaitFeedback" ondrop="moveTo('Await feedback')" ondragover="allowDrop(event)"></div></div>
-        <div class="dragHeadline"><b>Done</b><div class="drag-area" id="done" ondrop="moveTo('Done')" ondragover="allowDrop(event)"></div></div>
+        <div class="dragHeadline"><b>To do</b><div class="drag-area" id="todo" ondrop="moveTo('todo')" ondragover="allowDrop(event)"></div></div>
+        <div class="dragHeadline"><b>In progress</b><div class="drag-area" id="inProgress" ondrop="moveTo('progress')" ondragover="allowDrop(event)"></div></div>
+        <div class="dragHeadline"><b>Await feedback</b><div class="drag-area" id="awaitFeedback" ondrop="moveTo('feedback')" ondragover="allowDrop(event)"></div></div>
+        <div class="dragHeadline"><b>Done</b><div class="drag-area" id="done" ondrop="moveTo('done')" ondragover="allowDrop(event)"></div></div>
     </div>
 </div>
 <div id="popUp" class="popUp d-none">
