@@ -122,7 +122,7 @@ function sidePopUpInfo(i) { //Sidepopup Container
   <div class="sidePopupFull">
   <h1>Test</h1>
   </div>
-  `
+  `;
 }
 
 function addTaskBtn(i) {
@@ -130,7 +130,7 @@ function addTaskBtn(i) {
   <div class="sidePopupFull">
   <h1>Test</h1>
   </div>
-  `
+  `;
 }
 
 
@@ -148,7 +148,7 @@ function popUpInfo(i){ //Hauptpopup Container
                     </button>
     </div>
 
-    `
+    `;
 
 }
 
