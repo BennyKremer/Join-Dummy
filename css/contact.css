@@ -1,0 +1,94 @@
+.containerContact {
+    /* display: flex; */
+}
+
+.contactFullScreen {}
+
+.newContactContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 43px; */
+    /* position: relative; */
+    width: 50%;
+    height: 100vh;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+    border-radius: 0px 30px 30px 30px;
+    z-index: 10;
+}
+
+.contactHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 91px 46px;
+    gap: 12px; */
+    isolation: isolate;
+    width: 50%;
+    height: 100vh;
+    background: #4589FF;
+    z-index: 10;
+}
+
+.contactLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    width: 50%;
+    background-color: red;
+    /* position: relative; */
+}
+
+.contactRight {
+    height: 100vh;
+    width: 50%;
+    background-color: blue;
+
+}
+
+.contactBox {
+    display: flex;
+    justify-content: center;
+    /* position: absolute;
+    left: 50px; */
+    margin-right: 25px;
+    margin-top: 15px;
+    /* flex-direction: row;
+    align-items: flex-end; */
+    padding: 15px 25px;
+    gap: 35px;
+    width: 357px;
+    height: 77px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.btnNewContact {
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 10px;
+    gap: 10px;
+
+    position: absolute;
+    width: 197px;
+    height: 53px;
+    left: 1195px;
+    top: 907px;
+
+    /* Version 2/main color */
+
+    background: #4589FF;
+    /* Version 2/main color */
+
+    border: 1px solid #4589FF;
+    border-radius: 10px;
+}

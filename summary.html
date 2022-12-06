@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./css/addTask.css" />
     <link rel="stylesheet" href="./assets/templates/header.css" />
     <link rel="stylesheet" href="./assets/templates/sidebar.css" />
+    <link rel="stylesheet" href="./assets/templates/footer.css" />
 
     <!-- Bootstrap 5.2.2  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -30,45 +31,47 @@
     <!-- JavaScript -->
     <script src="./js/mini_backend.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/summary.js"></script>
     <script src="./js/addTask.js"></script>
 </head>
 
-<body onload="init()">
+<body onload="init(), getDaytime()">
     <!-- HEADER -->
     <!-- <header id="header"></header> -->
     <div w3-include-html="./assets/templates/header.html"></div>
     <!-- Content: Main and Sidebar -->
     <!-- <div> -->
     <aside w3-include-html="./assets/templates/sidebar.html"></aside>
-    <section class="containerSummary">
-       
-            <div class="firstSubContainer">
-                <span class="summarySalutation">
-                    Good morning,
-                </span>
-                <span class="summaryName">
-                    Sofia Müller
-                </span>
-            </div>
+    <div class="containerSummary">
 
-            <div class="secondSubContainer">
-                <div class="secondSubContainerLeft">
-                    <div>
-                        <div class="tasksUrgent">
-                            <img class="imageUrgent" src="./assets/img/Urgent.png" alt="">
-                            <span class="fontDesignNumberWhite"> 1 </span>
-                        </div>
-                        <span class="fontDesignTextWhite"> Tasks Urgent</span>
+        <div class="firstSubContainer">
+            <span class="summarySalutation" id="summarySalutation">
+            </span>
+            <span class="summaryName">
+                Sofia Müller
+            </span>
+        </div>
+
+        <div class="secondSubContainer">
+            <a href="board.html">
+            <div class="secondSubContainerLeft">
+                <div>
+                    <div class="tasksUrgent">
+                        <img class="imageUrgent" src="./assets/img/Urgent.png" alt="">
+                        <span class="fontDesignNumberWhite"> 1 </span>
                     </div>
-
-                    <div class="border"></div>
-
-                    <div class="upcomingDeadlineBox">
-                        <span class="upcomingDeadlineBoxDate"> October 16, 2022</span>
-                        <span class="upcomingDeadlineBoxText"> Upcoming deadline</span>
-                    </div>                  
+                    <span class="fontDesignTextWhite"> Tasks Urgent</span>
                 </div>
 
+                <div class="border"></div>
+
+                <div class="upcomingDeadlineBox">
+                    <span class="upcomingDeadlineBoxDate"> October 16, 2022</span>
+                    <span class="upcomingDeadlineBoxText"> Upcoming deadline</span>
+                </div>
+            </div>
+        </a>
+            <a href="board.html">
                 <div class="secondSubContainerRight">
                     <div class="summaryBoxSub">
                         <img src="./assets/img/Board.png" alt="">
@@ -76,9 +79,11 @@
                     </div>
                     <span class="fontDesignTextBlue"> Tasks To-do</span>
                 </div>
-            </div>
+            </a>
+        </div>
 
-            <div class="thirdSubContainer">
+        <div class="thirdSubContainer">
+            <a href="board.html">
                 <div class="summaryBoxes">
                     <div class="summaryBoxSub">
                         <img src="./assets/img/Board.png" alt="">
@@ -86,7 +91,8 @@
                     </div>
                     <span class="fontDesignTextBlue"> Task in Board</span>
                 </div>
-
+            </a>
+            <a href="board.html">
                 <div class="summaryBoxes">
                     <div class="summaryBoxSub">
                         <img src="./assets/img/In Progress.png" alt="">
@@ -94,7 +100,8 @@
                     </div>
                     <span class="fontDesignTextBlue"> Task in Progress</span>
                 </div>
-
+            </a>
+            <a href="board.html">
                 <div class="summaryBoxes">
                     <div class="summaryBoxSub">
                         <img src="./assets/img/Awaiting feedback.png" alt="">
@@ -102,7 +109,8 @@
                     </div>
                     <span class="fontDesignTextBlue"> Await Feedback</span>
                 </div>
-
+            </a>
+            <a href="board.html">
                 <div class="summaryBoxes">
                     <div class="summaryBoxSub">
                         <img src="./assets/img/Done.png" alt="">
@@ -110,45 +118,11 @@
                     </div>
                     <span class="fontDesignTextBlue"> Task Done</span>
                 </div>
-            </div>
-    </section>
-    <!-- </div> -->
+            </a>
+        </div>
+    </div>
+
+    <footer w3-include-html="./assets/templates/footer.html"></footer>
 </body>
 
 </html>
-
-<!-- Summary main -->
-<!--     
-        <div class="summary" id="summary">
-            <div class="firstSubContainer">
-                <div class="summarySalutation">
-                    Good morning,
-                </div>
-                <div class="summaryName">
-                    Sofia Müller
-                </div>
-            </div>
-            <div class="secondSubContainer">
-                <div class="secondSubContainerLeft">
-                    <div class="tasksUrgent">
-                        <img class="imageUrgent" src="./assets/img/Urgent.png" alt="">
-                        <span> 1 </span>
-                    </div>
-                    <div class="upcomingDeadline">
-
-                    </div>
-
-                </div>
-                <div class="secondSubContainerRight">
-
-                </div>
-            </div> -->
-
-<!-- </div> -->
-
-
-
-<!-- 
-</body>
-
-</html> -->

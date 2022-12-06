@@ -4,7 +4,6 @@
     align-items: center;
     justify-content: center;
     margin-left: 150px;
-  
 }
 
 .firstSubContainer {
@@ -74,6 +73,20 @@
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
     display: flex;
     justify-content: space-around;
+}
+
+.secondSubContainerLeft:hover {
+    background-color: #79aaff;
+    color: white;
+    transform: scale(105%);
+    transition: all 100ms ease-in-out;
+}
+
+.secondSubContainerRight:hover {
+    background-color:  #e9eef6;
+    color: white;
+    transform: scale(105%);
+    transition: all 100ms ease-in-out;
 }
 
 .tasksUrgent {
@@ -185,7 +198,146 @@
     flex-grow: 0;
 }
 
+.summaryBoxes:hover {
+    background-color: #eef2f6;
+    color: white;
+    transform: scale(105%);
+    transition: all 100ms ease-in-out;
+}
+
 .summaryBoxSub {
     display: flex;
     align-items: center;
 }
+
+footer {
+    display: none;
+  }
+
+@media (max-width: 1200px) {
+  
+    .containerSummary {
+        margin-left: 0;
+    }
+
+    aside {
+      display: none;  
+    }
+  
+    .f_container{
+        background-color: #FFFFFF;
+    }
+
+    footer {
+      display: block !important;
+    }
+  
+    .form_container {
+      align-items: center;
+      width: 100%;
+      top: 100px;
+      left: 0px;
+      padding: 0rem;
+      margin: 1.5rem auto 0rem;
+      gap: 25px;
+    }
+  
+    .task_btn {
+      width: 100%;
+      margin: auto auto 5rem ;
+      right: 0px;
+    }
+
+    .secondSubContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+            gap: 10px;
+            /* margin-bottom: 35px; */
+        
+    }
+  
+    .thirdSubContainer {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 35px;
+    }
+    
+    .secondSubContainerRight {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+    }
+
+    .secondSubContainerLeft {
+        width: 75%;
+    }
+
+    .fontDesignNumberBlack {
+        width: 28px;
+        height: 58px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 120%;
+        text-align: center;
+        color: #000000;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+    
+    .fontDesignNumberWhite {
+        width: 28px;
+        height: 58px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 120%;
+        color: #FFFFFF;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+    
+    .fontDesignTextWhite {
+        width: 140px;
+        height: 28px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 120%;
+        color: #FFFFFF;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+    
+    .fontDesignTextBlue {
+        width: 75px;
+        height: 56px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 120%;
+        text-align: center;
+        color: #4589FF;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+    
+    .summaryBoxes {
+        width: 25%;
+
+
+    }
+
+  }
+
