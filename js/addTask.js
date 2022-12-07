@@ -13,22 +13,15 @@ let select = document.getElementById("select");
 let subtask = document.getElementById("subtask");
 
 let tasks = [];
-// function not finished yet 
-// >> timeStamp, uploading the website on the ftp-server
-// let firstLoad = true;
-// let timeStamp = new Date()
-// if (window.location.hostname != '127.0.0.1') && (firstLoad) {
-//   console.log timeStamp.getDate.;
-// }
 
 
+/**
+ * 
+ */
 function render() {
   loadArrayFromBackend();
   clearFields();
 }
-
-
-
 
 /**
  * function resetDataType (at work > not working properly)
@@ -211,3 +204,20 @@ async function createTaskForHtml() {
   backendServerStorage();
 }
 //#endregion backendIntegration
+
+$("input").on("change", function() {
+  this.setAttribute(
+      "data-date",
+      moment(this.value, "YYYY-MM-DD")
+      .format( this.getAttribute("data-date-format") )
+  )
+}).trigger("change")
+
+
+// function changeDateFormat() {
+//   dateFormat = document.getElementById('due_date');
+//   dateFormat.setAttribute("data-date-format", 
+//     moment(dateFormat.value, "YYYY-MM-DD")
+//     .format(dateFormat.getAttribute("data-date-format" ))
+//   );
+// }

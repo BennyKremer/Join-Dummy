@@ -147,10 +147,27 @@ aside .container {
   border-radius: 0.5rem;
 }
 
-label {
-  font-size: 1.25rem;
-  font-weight: 700;
+input {
+  color: black;
+  justify-content: space-between;
 }
+
+input:before {
+  content: attr(data-date);
+  color: black;
+}
+
+input::-webkit-datetime-edit, 
+input::-webkit-inner-spin-button, 
+input::-webkit-clear-button {
+  display: none;
+}
+
+input::-webkit-calendar-picker-indicator {
+  color: black;
+}
+
+
 /*=======================
 // Task Buttons
 //=======================*/
