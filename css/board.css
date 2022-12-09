@@ -1,3 +1,7 @@
+body {
+    scroll-behavior: smooth;
+}
+
 .todo {
     background-color: white;
     border: 3px solid rgb(248, 248, 248);
@@ -116,7 +120,7 @@
     height: 35rem;
     margin-left: 500px;
     width: 77vh;
-    margin-top: -2932px;
+    top: 120px;
     border-radius: 20px;
     text-align: center;
     background-color: white;
@@ -195,10 +199,31 @@ h1 {
     padding-right: 20px;
 }
 
+.dueDatePopup {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.assignPopup {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.priorityPopup {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
 .closeBtn {
     display: flex;
     margin-left: 490px;
-    margin-top: -152px;
+    margin-top: -320px;
     background-color: white;
     cursor: pointer;
     border: none;
@@ -329,6 +354,21 @@ h2 {
     aside {
         display: flex !important;
     }
+    .s_container {
+        display: none !important;
+    }
 
+    .popUp {
+        margin-left: 10px !important;
+        width: 49vh;
+    }
+
+    .closeBtn {
+        margin-left: 244px;
+        margin-top: -328px;
+    }
+    .editTask {
+        margin-left: 240px;
+    }
 
 }

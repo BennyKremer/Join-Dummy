@@ -125,9 +125,7 @@ function addTaskBtn(i) {  //Zeigt den Sidepopup an
   document.getElementById('sidePopUpInfo').innerHTML = sidePopUpInfo(i);
 }
 
-function sidePopUpInfo(i) { //Sidepopup Container
 
-}
 
 function addTaskBtn(i) {
   document.getElementById('sidePopUp').classList.remove('d-none');
@@ -140,22 +138,33 @@ function closeSideTask() {
 
 
 function popUpInfo(i){ //Hauptpopup Container
-    return `
-    <div class="popUpFull" id="popUpFull">
-        <h1>${todos[i]['section']}</h1>
+  return `
+  <div class="popUpFull" id="popUpFull">
+  <h1>${todos[i]['section']}</h1>
             <div class="titlePopup">${todos[i]['title']}</div>
                 <div class="descriptionPopup">${todos[i]['description']}</div>
-                    <button onclick="closeTodo('popUp${todos['id']}', event)" class="closeBtn">
-                        <img src="./assets/img/closeBtn.png">
-                    </button>
-                    <button onclick="editTask()" class="editTask">
-                        <img src="./assets/img/pencilEdit.png">
-                    </button>
-    </div>
-
-    `;
-
+                <div class="dueDatePopup"><b>Due date:&nbsp;</b>${todos[i]['due_date']}</div>
+                <div class="priorityPopup"><b>Priority:&nbsp;</b>${todos[i]['due_date']}</div>
+                <div class="assignPopup"><b>Assigned To:&nbsp;</b><br>${todos[i]['assign']}</div>
+                <button onclick="closeTodo('popUp${todos['id']}', event)" class="closeBtn">
+                <img src="./assets/img/closeBtn.png">
+                </button>
+                <button onclick="editTask()" class="editTask">
+                <img src="./assets/img/pencilEdit.png">
+                </button>
+                </div>
+                
+                `;
+                
+              }
+              
+function sidePopUpInfo(i) {  //Sidepopup Container
+  return `
+  <div class="sidePopUpTitle">
+  Test</div>
+  `;
 }
+
 
 function editTask() { //edit Button
   document.getElementById('')
@@ -185,7 +194,7 @@ function closeTodoInfo(id, event) { //schließt Popup
     event.stopPropagation();
 }
 
-function createTask() {
+async function backendStorageTodos() { //speichert Tasks im Backend
   
 }
 
