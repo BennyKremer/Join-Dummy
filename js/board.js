@@ -143,8 +143,8 @@ function popUpInfo(i){ //Hauptpopup Container
   <h1>${todos[i]['section']}</h1>
             <div class="titlePopup">${todos[i]['title']}</div>
                 <div class="descriptionPopup">${todos[i]['description']}</div>
-                <div class="dueDatePopup"><b>Due date:&nbsp;</b>${todos[i]['due_date']}</div>
-                <div class="priorityPopup"><b>Priority:&nbsp;</b>${todos[i]['due_date']}</div>
+                <div class="dueDatePopup"><b>Due date:&nbsp;</b>${todos[i]['date']}</div>
+                <div class="priorityPopup"><b>Priority:&nbsp;</b>${todos[i]['prio']}</div>
                 <div class="assignPopup"><b>Assigned To:&nbsp;</b><br>${todos[i]['assign']}</div>
                 <button onclick="closeTodo('popUp${todos['id']}', event)" class="closeBtn">
                 <img src="./assets/img/closeBtn.png">
