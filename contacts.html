@@ -2,61 +2,104 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts | Join</title>
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Contacts | Join</title>
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/img/favicon.png" type="image/png" sizes="32x32" />
+    <!-- Cascading Style Sheets -->
+    <link rel="stylesheet" href="./css/summary.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/addTask.css" />
+    <link rel="stylesheet" href="./assets/templates/header.css" />
+    <link rel="stylesheet" href="./assets/templates/sidebar.css" />
 
-        <!-- Favicon -->
-        <link rel="icon" href="./assets/img/favicon.png" type="image/png" sizes="32x32" />
-        <!-- Cascading Style Sheets -->
-        <link rel="stylesheet" href="./css/summary.css" />
-        <link rel="stylesheet" href="./css/contact.css" />
-        <link rel="stylesheet" href="./css/style.css" />
-        <link rel="stylesheet" href="./css/addTask.css" />
-        <link rel="stylesheet" href="./assets/templates/header.css" />
-        <link rel="stylesheet" href="./assets/templates/sidebar.css" />
+    <!-- Bootstrap 5.2.2  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
 
-        <!-- Bootstrap 5.2.2  -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-            crossorigin="anonymous" />
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-            crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/3f31cbef9c.js" crossorigin="anonymous"></script>
 
-        <!-- Font Awesome -->
-        <script src="https://kit.fontawesome.com/3f31cbef9c.js" crossorigin="anonymous"></script>
-
-        <!-- JavaScript -->
-        <script src="./js/mini_backend.js"></script>
-        <script src="./js/script.js"></script>
-        <script src="./js/addTask.js"></script>
-        <script src="./js/contacts.js"></script>
-    </head>
-
+    <!-- JavaScript -->
+    <script src="./js/mini_backend.js"></script>
+    <script src="./js/script.js"></script>
+    <!-- <script src="./js/addTask.js"></script> -->
+    <script src="./js/contacts.js"></script>
 </head>
 
-<body onload="init();showContacts()">
-    <div class="containerContact">
-    <!-- HEADER -->
-    <!-- <header id="header"></header> -->
-    <div w3-include-html="./assets/templates/header.html"></div>
-    <!-- Content: Main and Sidebar -->
-    <!-- <div> -->
-    <aside w3-include-html="./assets/templates/sidebar.html"></aside>
-    
-        <div class="contactLeft" id="contactLeft">
+<body onload="init()">
+    <!-- <div class="containerContact">
+        HEADER 
+        <header id="header" class="stickyHeader"></header>
+        <div w3-include-html="./assets/templates/header.html"></div>
+        Content: Main and Sidebar 
 
-        </div>
+        <aside w3-include-html="./assets/templates/sidebar.html"></aside>
+        <div class="contactLeft" id="contactLeft"></div>
         <div class="contactRight" id="contactRight">
-            <button class="btnNewContact" onclick="contactFormular()">New contact</button>
+            <button class="btnNewContact" onclick="addNewContact()">New contact</button>
+        </div>
+    </div> -->
+
+
+
+
+
+
+    
+    <div w3-include-html="./assets/templates/header.html"></div>
+    <aside w3-include-html="./assets/templates/sidebar.html"></aside>
+
+    <div id="contacts-id" class="con_contacts">
+        <div id="contacts-list-container" class="con_contactsListContainer">
+            <div id="new-popup" class="con_editOrNewPopup d-none">
+                <form id="new-popup-form" class="con_NewForm d-none">
+                    <input id="con-new-name" class="con_editInputfield con_editInputfieldName"
+                        placeholder="FirstName LastName" type="text" required>
+                    <input id="con-new-phone" class="con_editInputfield con_editInputfieldPhone"
+                        placeholder="Phone number" type="number" required>
+                    <input id="con-new-mail" class="con_editInputfield con_editInputfieldMail" placeholder="E-Mail"
+                        type="email" required>
+                    <input class="con_editInputfield" value="Submit" type="button" onclick="addNewContact();">
+                    <input class="con_editInputfield" value="Cancel" type="button" onclick="cancelAddNewContact();">
+                </form>
+            </div>
+            <div id="contact-list" class="con_contactList ">
+                <div class="contact-entry">
+                    <div class="name-inital">
+                        A
+                    </div>
+                    <div class="full-name">
+                        Arinze Kano
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="contact-information" class="contactRightSide">
+            <div class="con_buttonContainer">
+                <div id="input-wrapper">
+                    <input type="text" id="name-input" placeholder="Enter name">
+                    <button id="btn-add-contact" class="btn-add-contact">Add</button>
+                </div>
+                <button class="btnNewContact hoverEffect hoverButton" onclick="newContact()">
+                    <div>
+                    <span style="font-size: 21px; color: white;">New contact</span>
+                    <img src="./assets/img/add_contact.png">
+                    </div>
+                 
+                </button>
+            </div>
         </div>
     </div>
-
-
-</body>
+    <footer w3-include-html="./assets/templates/footer.html"></footer>
+</body> 
 
 </html>

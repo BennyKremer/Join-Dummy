@@ -1,8 +1,6 @@
 setURL("https://gruppe-373.developerakademie.net/smallest_backend_ever");
 tasks = getArrayFromBackend('tasks');
 
-
-
 async function getDaytime() {
     let url = 'https://worldtimeapi.org/api/timezone/Europe/Berlin';
     let response = await fetch(url);

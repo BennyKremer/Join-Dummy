@@ -4,6 +4,8 @@
     align-items: center;
     justify-content: center;
     margin-left: 150px;
+    /* text-decoration: none; */
+    
 }
 
 .firstSubContainer {
@@ -26,6 +28,7 @@
     display: flex;
     gap: 35px;
     margin-bottom: 35px;
+   
 }
 
 .upcomingDeadlineBox {
