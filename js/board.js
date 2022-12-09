@@ -140,31 +140,30 @@ function closeSideTask() {
 function popUpInfo(i){ //Hauptpopup Container
   return `
   <div class="popUpFull" id="popUpFull">
-  <h1>${todos[i]['section']}</h1>
-            <div class="titlePopup">${todos[i]['title']}</div>
-                <div class="descriptionPopup">${todos[i]['description']}</div>
-                <div class="dueDatePopup"><b>Due date:&nbsp;</b>${todos[i]['date']}</div>
-                <div class="priorityPopup"><b>Priority:&nbsp;</b>${todos[i]['prio']}</div>
-                <div class="assignPopup"><b>Assigned To:&nbsp;</b><br>${todos[i]['assign']}</div>
-                <button onclick="closeTodo('popUp${todos['id']}', event)" class="closeBtn">
-                <img src="./assets/img/closeBtn.png">
-                </button>
-                <button onclick="editTask()" class="editTask">
-                <img src="./assets/img/pencilEdit.png">
-                </button>
-                </div>
-                
-                `;
-                
-              }
+    <h1>${todos[i]['section']}</h1>
+          <div class="titlePopup">${todos[i]['title']}</div>
+          <div class="descriptionPopup">${todos[i]['description']}</div>
+          <div class="dueDatePopup"><b>Due date:&nbsp;</b>${todos[i]['date']}</div>
+          <div class="priorityPopup"><b>Priority:&nbsp;</b>${todos[i]['prio']}</div>
+          <div class="assignPopup"><b>Assigned To:&nbsp;</b><br>${todos[i]['assign']}</div>
+            <button onclick="closeTodo('popUp${todos['id']}', event)" class="closeBtn">
+              <img src="./assets/img/closeBtn.png">
+            </button>
+            <button onclick="editTask()" class="editTask">
+              <img src="./assets/img/pencilEdit.png">
+            </button>
+</div>       
+`;      
+}
               
 function sidePopUpInfo(i) {  //Sidepopup Container
   return `
-  <div class="sidePopUpTitle">
-  Test</div>
+  <div class="sidePopUpTitle">${todos[i]['description']}</div>
   `;
 }
+ function showSidePopup(i){ //zeigt Sidepopup an
 
+ }
 
 function editTask() { //edit Button
   document.getElementById('')

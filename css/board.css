@@ -1,5 +1,6 @@
 body {
     scroll-behavior: smooth;
+
 }
 
 .todo {
@@ -113,21 +114,50 @@ body {
 }
 
 .popUp {
-    position: absolute;
+  /*  position: fixed;
     justify-content: center;
     align-items: center;
     border: 1px solid rgb(212, 212, 212);
-    height: 35rem;
+    height: 37rem;
     margin-left: 500px;
     width: 77vh;
-    top: 120px;
+    top: 60px;
     border-radius: 20px;
     text-align: center;
+    background-color: white;
+    animation: showPopup ease-in-out 150ms; */
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100%;
+    background-color: grey;
+    opacity: 0.9;
+}
+
+.popUpTodoInfo {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(212, 212, 212);
+    height: 37rem;
+    margin-left: 500px;
+    width: 77vh;
+    top: 60px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: white;
+    animation: showPopup ease-in-out 150ms;
+    opacity: 1 !important;
+}
+
+.popUpFull {
     background-color: white;
 }
 
 .sidePopUp {
-    position: absolute;
+    position: fixed;
     width: 400px;
     height: 100vh;
     border-top-left-radius: 20px;
@@ -158,6 +188,12 @@ body {
     font-size: large;
     cursor: pointer;
     border: none;
+}
+
+.sidePopUpTitle {
+    height: 200px;
+    width: 200px;
+    background-color: red;
 }
 
 .searchSection {
@@ -238,7 +274,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 440px;
+    margin-top: 455px;
     margin-left: 476px;
     cursor: pointer;
 }
@@ -281,6 +317,18 @@ h2 {
     margin-right: 30px;
 }
 
+@keyframes showPopup {
+    0% {
+        opacity: 0;
+        scale: 0.5;
+    } 50% {
+        opacity: 0;
+        scale: 0.8;
+    } 100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
 
 /*---------------------------*/
 
