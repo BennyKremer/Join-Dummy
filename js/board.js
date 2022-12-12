@@ -97,6 +97,10 @@ function updateHTML() {
   }
 }
 
+/**
+ * This function is used to let taking the Elements for the Drag & Drop Section
+ * @param {string} id - This is the clicked Drag Element
+ */
 function startDragging(id) { //lässt Tasks nehmen
   currentDraggedElement = id;
 }
