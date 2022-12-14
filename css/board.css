@@ -155,7 +155,7 @@ body {
     background-color: white;
 }
 
-.sidePopUp {
+.taskPopUp {
     position: fixed;
     width: 400px;
     height: 100vh;
@@ -189,7 +189,7 @@ body {
     border: none;
 }
 
-.sidePopUpTitle {
+.taskPopUpTitle {
     height: 200px;
     width: 200px;
     background-color: red;
@@ -294,7 +294,7 @@ h2 {
     font-size: 40px;
 }
 
-.sidePopupHead {
+.taskPopUpHead {
     display: flex;
     justify-content: space-between;
     flex-direction: row;

@@ -124,20 +124,20 @@ function showPopup(i) {   //Zeigt den Board- Hauptpopup an
   document.getElementById('popUpInfo').innerHTML = popUpInfo(i);
 }
 
-function addTaskBtn(i) {  //Zeigt den Sidepopup an
-  document.getElementById('sidePopUp').classList.add('d-none');
-  document.getElementById('sidePopUpInfo').innerHTML = sidePopUpInfo(i);
+function addTaskBtn(i) {  //Zeigt den taskPopUp an
+  document.getElementById('taskPopUp').classList.add('d-none');
+  document.getElementById('taskPopUpInfo').innerHTML = taskPopUpInfo(i);
 }
 
 
 
 function addTaskBtn(i) {
-  document.getElementById('sidePopUp').classList.remove('d-none');
+  document.getElementById('taskPopUp').classList.remove('d-none');
   
 }
 
 function closeSideTask() {
-  document.getElementById('sidePopUp').classList.add('d-none');
+  document.getElementById('taskPopUp').classList.add('d-none');
 }
 
 
@@ -160,12 +160,12 @@ function popUpInfo(i){ //Hauptpopup Container
 `;      
 }
               
-function sidePopUpInfo(i) {  //Sidepopup Container
+function taskPopUpInfo(i) {  //taskPopUp Container
   return `
-  <div class="sidePopUpTitle">${todos[i]['description']}</div>
+  <div class="taskPopUpTitle">${todos[i]['description']}</div>
   `;
 }
- function showSidePopup(i){ //zeigt Sidepopup an
+ function showtaskPopUp(i){ //zeigt taskPopUp an
 
  }
 
