@@ -155,19 +155,6 @@ body {
     background-color: white;
 }
 
-.taskPopUp {
-    position: fixed;
-    width: 400px;
-    height: 100vh;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border: 1px solid rgb(230, 230, 230);
-    background-color: rgb(252, 252, 252);
-    top: 0px;
-    right: 0px;
-
-}
-
 .d-none {
     display: none !important;
 }
@@ -187,12 +174,6 @@ body {
     font-size: large;
     cursor: pointer;
     border: none;
-}
-
-.taskPopUpTitle {
-    height: 200px;
-    width: 200px;
-    background-color: red;
 }
 
 .searchSection {
@@ -294,6 +275,28 @@ h2 {
     font-size: 40px;
 }
 
+/*****************************
+ * START: TASK PopUp         *
+ * export in task.css        *
+
+.taskPopUp {
+    position: fixed;
+    width: 400px;
+    height: 100vh;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 1px solid rgb(230, 230, 230);
+    background-color: rgb(252, 252, 252);
+    top: 0px;
+    right: 0px;
+}
+
+.taskPopUpTitle {
+    height: 200px;
+    width: 200px;
+    background-color: red;
+}
+
 .taskPopUpHead {
     display: flex;
     justify-content: space-between;
@@ -315,6 +318,8 @@ h2 {
     border: none;
     margin-right: 30px;
 }
+/* END: TASK PopUp
+ *****************************/
 
 @keyframes showPopup {
     0% {
