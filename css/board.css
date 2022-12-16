@@ -259,22 +259,6 @@ h1 {
     cursor: pointer;
 }
 
-
-.closeSideTask {
-    border: none;
-    display: flex;
-    background-color: white;
-    margin-top: 20px;
-    margin-left: 350px;
-    cursor: pointer;
-
-}
-
-h2 {
-    margin-left: 24px;
-    font-size: 40px;
-}
-
 /*****************************
  * START: TASK PopUp         *
  * export in task.css        *
@@ -289,12 +273,6 @@ h2 {
     background-color: rgb(252, 252, 252);
     top: 0px;
     right: 0px;
-}
-
-.taskPopUpTitle {
-    height: 200px;
-    width: 200px;
-    background-color: red;
 }
 
 .taskPopUpHead {
@@ -317,6 +295,28 @@ h2 {
     cursor: pointer;
     border: none;
     margin-right: 30px;
+}
+
+h2 {
+    margin-left: 24px;
+    font-size: 40px;
+}
+
+.taskPopUpTitle {
+    height: 200px;
+    width: 200px;
+    background-color: red;
+}
+
+.closeSideTask {
+    border: none;
+    display: flex;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: white;
+    cursor: pointer;
+
 }
 /* END: TASK PopUp
  *****************************/

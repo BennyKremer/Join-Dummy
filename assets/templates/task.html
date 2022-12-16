@@ -1,5 +1,17 @@
 <section>
-  <form id="addTask_form" onsubmit="createTaskForHtml(); return false">
+  <button class="closeSideTask" id="closeSideTask" onclick="closeSideTask()">
+    <img class="closeX" src="./assets/img/closeBtn.png">
+  </button>
+  <form id="addTask_form" onsubmit="createTaskForBoard(); return false">
+    <div class="form_top">
+      <div class="task_btn">
+        <h2><b>Add Task</b></h2>
+        <button id="create_btn" class="create_btn" type="submit">
+          <span>Create Task</span>
+          <span class="iconTask"><i class="fa-solid fa-check"></i></span>
+        </button>
+      </div>
+    </div>
     <div class="form_container">
       <!-- Title -->
       <div>
@@ -7,7 +19,7 @@
         <input
           id="enter_title"
           type="text"
-          class="input_form"
+          class="input_form typeText"
           name="Title"
           placeholder="Enter a Title"
           required
@@ -16,7 +28,7 @@
       <!-- Assign To -->
       <div>
         <label></label>
-        <select id="assign" class="input_form" name="Assign To">
+        <select id="assign" class="input_form typeSelection" name="Assign To">
           <option>You</option>
           <option>Maximillian Vogel</option>
           <option>Invite new contact</option>
@@ -29,7 +41,7 @@
         <!-- <input class="input_form" id="due_date" type="date" name="date"  required/> -->
         <!-- JQuery Version -->
         <input
-          class="input_form"
+          class="input_form typeDate"
           id="due_date"
           type="date"
           data-date=""
@@ -43,7 +55,7 @@
       <!-- Category -->
       <div>
         <label>Category</label>
-        <select id="category" class="input_form" name="Category">
+        <select id="category" class="input_form typeSelection" name="Category">
           <option type="checkbox">New Category</option>
           <option>Sales</option>
           <option>Backoffice</option>
@@ -51,46 +63,22 @@
       </div>
       <!-- Priority_buttons -->
       <div class="priority_btn">
-        <button
-          type="button"
-          class="prio_Urgent"
-          id="prio_Urgent"
-          onclick="setPrioUrgent()"
-        >
+        <button type="button" class="prio_Urgent" id="prio_Urgent" onclick="setPrioUrgent()">
           Urgent
           <div>
-            <span
-              id="icon_prioUrgent_red"
-              class="icon_prio icon_prioUrgent_red"
-            >
-            </span>
+            <span id="icon_prioUrgent_red" class="icon_prio icon_prioUrgent_red"></span>
           </div>
         </button>
-        <button
-          type="button"
-          class="prio_Medium"
-          id="prio_Medium"
-          onclick="setPrioMedium()"
-        >
+        <button type="button" class="prio_Medium" id="prio_Medium" onclick="setPrioMedium()">
           Medium
           <div>
-            <span
-              id="icon_prioMedium_orange"
-              class="icon_prio icon_prioMedium_orange"
-            >
-            </span>
+            <span id="icon_prioMedium_orange" class="icon_prio icon_prioMedium_orange"></span>
           </div>
         </button>
-        <button
-          type="button"
-          class="prio_Low"
-          id="prio_Low"
-          onclick="setPrioLow()"
-        >
+        <button type="button" class="prio_Low" id="prio_Low" onclick="setPrioLow()">
           Low
           <div>
-            <span id="icon_prioLow_green" class="icon_prio icon_prioLow_green">
-            </span>
+            <span id="icon_prioLow_green" class="icon_prio icon_prioLow_green"></span>
           </div>
         </button>
       </div>
@@ -109,26 +97,7 @@
       <!-- Subtasks -->
       <div>
         <label>Subtasks</label>
-        <input
-          id="subtask"
-          type="text"
-          class="input_form"
-          name="text_name"
-          placeholder="Add new subtask"
-        />
-      </div>
-    </div>
-    <!-- bottom row contain two buttons -->
-    <div class="form_bottom">
-      <div class="task_btn">
-        <button id="clear_btn" class="clear_btn" onclick="clearFormFields()">
-          <div>Clear</div>
-          <span class="iconTask"><i class="fa-solid fa-xmark"></i></span>
-        </button>
-        <button id="create_btn" class="create_btn" type="submit">
-          <span>Create Task</span>
-          <span class="iconTask"><i class="fa-solid fa-check"></i></span>
-        </button>
+        <input id="subtask" type="text" class="input_form typeText" name="text_name" placeholder="Add new subtask"/>
       </div>
     </div>
   </form>

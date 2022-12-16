@@ -124,22 +124,23 @@ function showPopup(i) {   //Zeigt den Board- Hauptpopup an
   document.getElementById('popUpInfo').innerHTML = popUpInfo(i);
 }
 
-function addTaskBtn(i) {  //Zeigt den taskPopUp an
-  document.getElementById('taskPopUp').classList.add('d-none');
-  document.getElementById('taskPopUpInfo').innerHTML = taskPopUpInfo(i);
-}
+// function addTaskBtn(i) {  //Zeigt den taskPopUp an
+// >>>>>>>>>>>>> DOPPELTE function >>>>>>>>>>>>>>>>>>>>>> LÖSCHEN
+//   document.getElementById('taskPopUp').classList.add('d-none');
+//   document.getElementById('taskPopUpInfo').innerHTML = taskPopUpInfo(i);
+// }
 
 
-
-function addTaskBtn(i) {
-  document.getElementById('taskPopUp').classList.remove('d-none');
+// EXPORT in "task.js" ------------------------------------------
+// function addTaskBtn(i) {
+//   document.getElementById('taskPopUp').classList.remove('d-none');
   
-}
+// }
 
-function closeSideTask() {
-  document.getElementById('taskPopUp').classList.add('d-none');
-}
-
+// function closeSideTask() {
+//   document.getElementById('taskPopUp').classList.add('d-none');
+// }
+//--------------------------------------------------------------
 
 function popUpInfo(i){ //Hauptpopup Container
   return `
@@ -159,17 +160,20 @@ function popUpInfo(i){ //Hauptpopup Container
 </div>       
 `;      
 }
-              
-function taskPopUpInfo(i) {  //taskPopUp Container
-  return `
-  <div class="taskPopUpTitle">${todos[i]['description']}</div>
-  `;
-}
- function showtaskPopUp(i){ //zeigt taskPopUp an
 
- }
+// ----------------------------------------------------------------
+// WIRD NICHT BENUTZT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> LÖSCHEN
+// function taskPopUpInfo(i) {  //taskPopUp Container
+//   return `
+//   <div class="taskPopUpTitle">${todos[i]['description']}</div>
+//   `;
+// }
+//  function showtaskPopUp(i){ //zeigt taskPopUp an
 
-function editTask() { //edit Button
+//  }
+// ----------------------------------------------------------------
+
+function editTask() { //edit Button     editTask => editTodo
   document.getElementById('')
 }
 
