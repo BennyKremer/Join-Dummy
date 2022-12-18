@@ -278,22 +278,17 @@ h1 {
     cursor: pointer;
 }
 
-<<<<<<< HEAD
-
-.closeSideTask {
-    border: none;
+h3 {
     display: flex;
+    position: absolute;
     background-color: white;
-    margin-top: 20px;
-    margin-left: 350px;
-    cursor: pointer;
-
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    border-radius: 20px;
 }
-
-h2 {
-    margin-left: 24px;
-    font-size: 40px;
-=======
 /*****************************
  * START: TASK PopUp         *
  * export in task.css        *
@@ -308,7 +303,6 @@ h2 {
     background-color: rgb(252, 252, 252);
     top: 0px;
     right: 0px;
->>>>>>> 342c061cb985c8b2577714e750414b18a055f7be
 }
 
 .taskPopUpHead {
@@ -333,19 +327,6 @@ h2 {
     margin-right: 30px;
 }
 
-<<<<<<< HEAD
-h3 {
-    display: flex;
-    position: absolute;
-    background-color: white;
-    height: 100%;
-    width: 100%;
-    top: 0px;
-    margin-top: 0px;
-    margin-left: 0px;
-    border-radius: 20px;
-}
-=======
 h2 {
     margin-left: 24px;
     font-size: 40px;
@@ -369,7 +350,6 @@ h2 {
 }
 /* END: TASK PopUp
  *****************************/
->>>>>>> 342c061cb985c8b2577714e750414b18a055f7be
 
 @keyframes showPopup {
     0% {

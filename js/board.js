@@ -124,23 +124,6 @@ function showPopup(i) {   //Zeigt den Board- Hauptpopup an
   document.getElementById('popUpInfo').innerHTML = popUpInfo(i);
 }
 
-<<<<<<< HEAD
-function addTaskBtn(i) {  //Zeigt den Sidepopup an
-  document.getElementById('sidePopUp').classList.add('d-none');
-  document.getElementById('sidePopUpInfo').innerHTML = sidePopUpInfo(i);
-}
-
-
-
-function addTaskBtn(i) {
-  document.getElementById('sidePopUp').classList.remove('d-none');
-  
-}
-
-function closeSideTask() {
-  document.getElementById('sidePopUp').classList.add('d-none');
-}
-=======
 // function addTaskBtn(i) {  //Zeigt den taskPopUp an
 // >>>>>>>>>>>>> DOPPELTE function >>>>>>>>>>>>>>>>>>>>>> LÖSCHEN
 //   document.getElementById('taskPopUp').classList.add('d-none');
@@ -153,7 +136,6 @@ function closeSideTask() {
 //   document.getElementById('taskPopUp').classList.remove('d-none');
   
 // }
->>>>>>> 342c061cb985c8b2577714e750414b18a055f7be
 
 // function closeSideTask() {
 //   document.getElementById('taskPopUp').classList.add('d-none');
@@ -178,16 +160,6 @@ function popUpInfo(i){ //Hauptpopup Container
 </div>       
 `;      
 }
-<<<<<<< HEAD
-              
-function sidePopUpInfo(i) {  //Sidepopup Container
-  return `
-  <div class="sidePopUpTitle">${todos[i]['description']}</div>
-  `;
-}
- function showSidePopup(i){ //zeigt Sidepopup an
-=======
->>>>>>> 342c061cb985c8b2577714e750414b18a055f7be
 
 // ----------------------------------------------------------------
 // WIRD NICHT BENUTZT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> LÖSCHEN
@@ -198,18 +170,16 @@ function sidePopUpInfo(i) {  //Sidepopup Container
 // }
 //  function showtaskPopUp(i){ //zeigt taskPopUp an
 
-<<<<<<< HEAD
 function editTask() { //edit Button
   document.getElementById('popUpFull').innerHTML += /*html*/ ` 
     <h3>test</h3>
   `;
-=======
+}
 //  }
 // ----------------------------------------------------------------
 
 function editTask() { //edit Button     editTask => editTodo
   document.getElementById('')
->>>>>>> 342c061cb985c8b2577714e750414b18a055f7be
 }
 
 function closeTodo() {
