@@ -176,4 +176,9 @@ function clearFields() {
   subtask.value = "";
 }
 
+function testDate() {
+  let dueDate = document.getElementById("due_date");
+  console.log(dueDate.value);
+}
+
 //#endregion Add Task
