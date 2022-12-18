@@ -165,6 +165,7 @@ function createTasks() {
     description: description.value,
     subtask: subtask.value,
     board_category: "todo",
+    id: new Date().getTime()
   };
 
   tasks.push(task);

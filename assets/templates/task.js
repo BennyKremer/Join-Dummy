@@ -14,41 +14,6 @@ let subtask = document.getElementById("subtask");
 
 let tasks = [];
 
-
-/**
- * 
- */
-function render() {
-  loadArrayFromBackend();
-  clearFields();
-}
-
-/**
- * function resetDataType (at work > not working properly)
- * @param {*} element
- */
-function resetDataType(element) {
-  let typeofElement = typeof element;
-  switch (typeofElement) {
-    case "string":
-      element = "";
-      console.log(`Type of ${element}: ${typeofElement}`);
-      break;
-    case "number":
-      element = 0;
-      console.log(`Type of ${element}: ${typeofElement}`);
-      break;
-    case "boolean":
-      element = true;
-      console.log(`Type of ${element}: ${typeofElement}`);
-      break;
-    default:
-      console.log(`Type of ${element}: ${typeofElement}`);
-      console.log("Error: Unknown");
-  }
-}
-
-
 //#region prioBtn
 let btnPrioUrgent = false;
 let btnPrioMedium = false;
@@ -116,68 +81,16 @@ function setPrioLow() {
 //#endregion prioBtn
 
 
-//#region taskButtons
-function clearFormFields() {
-  let enterTitle = document.getElementById("enter_title");
-  let assign = document.getElementById("assign");
-  let dueDate = document.getElementById("due_date");
-  let description = document.getElementById("description");
-  let subtask = document.getElementById("subtask");
-
-  enterTitle.value = "";
-  assign.selectedIndex = 0;
-  dueDate.value = "";
-  description.value = "";
-  subtask.value = "";
-}
-//#endregion taskButtons
-
-
 //#region backendIntegration
 
-function loadArrayFromBackend() {
-  tasks = getArrayFromBackend('tasks');
-}
+// function loadArrayFromBackend() {
+//   tasks = getArrayFromBackend('tasks');
+// }
 
 async function backendServerStorage() {
   createTasks();
   setArrayToBackend("tasks",tasks);
   clearFields();
-}
-
-function setPrioStatus(){
-  let status = '';
-  if (btnPrioUrgent) status = "urgent";
-  if (btnPrioMedium) status = "medium";
-  if (btnPrioLow) status = "low";
-  return status;
-}
-
-function createTasks() {
-  let prioStat = setPrioStatus();
-
-  let task = {
-    title: enterTitle.value,
-    assign: assign.value,
-    date: dueDate.value,
-    category: category.value,
-    prio: prioStat,
-    description: description.value,
-    subtask: subtask.value,
-    board_category: "todo",
-  };
-
-  tasks.push(task);
-  console.log(tasks);
-}
-
-function clearFields() {
-  enterTitle.value = "";
-  assign.selectedIndex = 0;
-  dueDate.value = "";
-  category.selectedIndex = 0;
-  description.value = "";
-  subtask.value = "";
 }
 
 /**
@@ -208,13 +121,59 @@ $("input").on("change", function() {
       .format( this.getAttribute("data-date-format") )
   )
 }).trigger("change")
-
-
-// function changeDateFormat() {
-//   dateFormat = document.getElementById('due_date');
-//   dateFormat.setAttribute("data-date-format", 
-//     moment(dateFormat.value, "YYYY-MM-DD")
-//     .format(dateFormat.getAttribute("data-date-format" ))
-//   );
-// }
 //#endregion DateFormat
+
+
+//#region Add Task
+async function addTaskBtn() {
+  document.getElementById('taskPopUp').classList.remove('d-none');
+  await includeHTML();
+  clearFields();
+}
+
+function closeSideTask() {
+  document.getElementById('taskPopUp').classList.add('d-none');
+}
+
+function setPrioStatus(){
+  let status = '';
+  if (btnPrioUrgent) status = "urgent";
+  if (btnPrioMedium) status = "medium";
+  if (btnPrioLow) status = "low";
+  return status;
+}
+
+function createTasks() {
+  let prioStat = setPrioStatus();
+
+  let task = {
+    title: enterTitle.value,
+    assign: assign.value,
+    date: dueDate.value,
+    category: category.value,
+    prio: prioStat,
+    description: description.value,
+    subtask: subtask.value,
+    board_category: "todo",
+    id: new Date().getTime()
+  };
+
+  tasks.push(task);
+  console.log(tasks);
+}
+
+function clearFields() {
+  let enterTitle = document.getElementById("enter_title");
+  let assign = document.getElementById("assign");
+  let dueDate = document.getElementById("due_date");
+  let description = document.getElementById("description");
+  let subtask = document.getElementById("subtask");
+
+  enterTitle.value = "";
+  assign.selectedIndex = 0;
+  dueDate.value = "";
+  description.value = "";
+  subtask.value = "";
+}
+
+//#endregion Add Task

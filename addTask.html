@@ -42,13 +42,13 @@
           <div>
             <label></label>
             <input
-              id="enter_title" type="text" class="input_form" name="Title"
+              id="enter_title" type="text" class="input_form typeText" name="Title"
               placeholder="Enter a Title" required/>
           </div>
           <!-- Assign To -->
           <div>
             <label></label>
-            <select id="assign" class="input_form" name="Assign To">
+            <select id="assign" class="input_form typeSelection" name="Assign To">
               <option>You</option>
               <option>Maximillian Vogel</option>
               <option>Invite new contact</option>
@@ -57,10 +57,8 @@
           <!-- Due date -->
           <div>
             <label>Due date</label>
-            <!-- Old version -->
-            <!-- <input class="input_form" id="due_date" type="date" name="date"  required/> -->
             <!-- JQuery Version -->
-            <input class="input_form" id="due_date" type="date"
+            <input class="input_form typeDate" id="due_date" type="date"
             data-date="" data-date-format="DD/MM/YY" value="2022-12-19"/> 
             <!-- VanillaJS -->
             <!-- <input class="input_form" id="due_date" type="date" onchange="changeDateFormat()"
@@ -69,7 +67,7 @@
           <!-- Category -->
           <div>
             <label>Category</label>
-            <select id="category" class="input_form" name="Category">
+            <select id="category" class="input_form typeSelection" name="Category">
               <option type="checkbox">New Category</option>
               <option>Sales</option>
               <option>Backoffice</option>
@@ -109,7 +107,7 @@
           <!-- Subtasks -->
           <div>
             <label>Subtasks</label>
-            <input id="subtask" type="text" class="input_form" name="text_name"
+            <input id="subtask" type="text" class="input_form typeText" name="text_name"
               placeholder="Add new subtask"
             />
           </div>
