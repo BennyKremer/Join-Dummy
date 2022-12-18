@@ -124,20 +124,20 @@ function showPopup(i) {   //Zeigt den Board- Hauptpopup an
   document.getElementById('popUpInfo').innerHTML = popUpInfo(i);
 }
 
-function addTaskBtn(i) {  //Zeigt den taskPopUp an
-  document.getElementById('taskPopUp').classList.add('d-none');
-  document.getElementById('taskPopUpInfo').innerHTML = taskPopUpInfo(i);
+function addTaskBtn(i) {  //Zeigt den Sidepopup an
+  document.getElementById('sidePopUp').classList.add('d-none');
+  document.getElementById('sidePopUpInfo').innerHTML = sidePopUpInfo(i);
 }
 
 
 
 function addTaskBtn(i) {
-  document.getElementById('taskPopUp').classList.remove('d-none');
+  document.getElementById('sidePopUp').classList.remove('d-none');
   
 }
 
 function closeSideTask() {
-  document.getElementById('taskPopUp').classList.add('d-none');
+  document.getElementById('sidePopUp').classList.add('d-none');
 }
 
 
@@ -160,17 +160,19 @@ function popUpInfo(i){ //Hauptpopup Container
 `;      
 }
               
-function taskPopUpInfo(i) {  //taskPopUp Container
+function sidePopUpInfo(i) {  //Sidepopup Container
   return `
-  <div class="taskPopUpTitle">${todos[i]['description']}</div>
+  <div class="sidePopUpTitle">${todos[i]['description']}</div>
   `;
 }
- function showtaskPopUp(i){ //zeigt taskPopUp an
+ function showSidePopup(i){ //zeigt Sidepopup an
 
  }
 
 function editTask() { //edit Button
-  document.getElementById('')
+  document.getElementById('popUpFull').innerHTML += /*html*/ ` 
+    <h3>test</h3>
+  `;
 }
 
 function closeTodo() {
@@ -185,6 +187,8 @@ function allowDrop(ev) { // lässt Task im neuen Feld
 
 function moveTo(category) { //Draggable Area
   todos[currentDraggedElement]["board_category"] = category;
+  let categoryTodo = todos.filter((t) => t["board_category"] == "feedback")
+  categoryTodo[currentDraggedElement]["board_category"] = category;
   updateHTML();
 }
 
